@@ -64,6 +64,19 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      description: The language of your write-up. English is preferred for reach, but Portuguese or bilingual is welcome.
+      options:
+        - English
+        - Português
+        - English + Português
+        - Other (state in the description)
+    validations:
+      required: true
+
   - type: textarea
     id: description
     attributes:

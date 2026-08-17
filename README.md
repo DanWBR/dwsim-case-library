@@ -1,5 +1,7 @@
 # DWSIM Case Library
 
+**English** | [Português](README.pt-BR.md)
+
 A community collection of real industrial process cases modeled in [DWSIM](https://dwsim.org): crude distillation, hydrotreating, gas processing, separation and reaction systems, and more. Each case documents the process, the thermodynamic choices, the tuning and convergence tips, and, where allowed, a comparison against plant or commercial-software data and the DWSIM flowsheet file itself.
 
 The goal is simple: shorten the learning curve for new users and show what DWSIM can do on industrial problems, using examples contributed by engineers who actually run these processes.

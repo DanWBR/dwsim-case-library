@@ -1,5 +1,7 @@
 # Contributing a case
 
+**English** | [Português](CONTRIBUTING.pt-BR.md)
+
 Thank you for sharing your work. A good case here can save another engineer days. This guide keeps submissions consistent and, just as important, safe to publish.
 
 ## Before you start: the confidentiality checklist
@@ -95,6 +97,6 @@ You can help by verifying someone else's case: open the flowsheet, run it, and c
 
 ## Style
 
-- Write in English so the library stays usable worldwide. A second language version of a case is welcome as an extra file.
+- English is preferred so the library stays usable worldwide, but Portuguese or bilingual write-ups are welcome. State the language in the **Language** field of the case, and if you write in another language, a short English summary at the top helps others find it. A second-language version of a case can also be added as an extra file (for example `README.pt-BR.md` inside the case folder).
 - Use SI units, and state the unit system if you deviate.
 - Prefer plain, specific language. "The reboiler duty had to be raised about 8% over the design value to hit the bottoms spec" is more useful than "it was hard to converge".

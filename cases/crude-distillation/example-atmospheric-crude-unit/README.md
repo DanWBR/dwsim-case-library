@@ -3,6 +3,7 @@
 **Category:** crude-distillation
 **Status:** example
 **DWSIM version:** 10.2.0
+**Language:** English
 **Contributor:** maintainers
 
 > This is a worked example that shows how a case should read. It is illustrative, not a real plant. Replace it with your own case using the [template](../../../templates/CASE_TEMPLATE.md).

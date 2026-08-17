@@ -17,7 +17,7 @@ The goal is simple: shorten the learning curve for new users and show what DWSIM
 - Confidential or proprietary plant data you do not have the right to publish.
 - Benchmark comparisons that a commercial tool's license forbids you from publishing.
 - Personal data of any kind.
-- Support questions. Use the [DWSIM forums](https://sourceforge.net/p/dwsim/discussion/) or [Discussions](https://github.com/DanWBR/dwsim10/discussions) for those.
+- Support questions. Use [DWSIM Discussions](https://github.com/DanWBR/dwsim10/discussions) for those.
 
 ## Browse the cases
 

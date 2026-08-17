@@ -1,11 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: DWSIM support forum
-    url: https://sourceforge.net/p/dwsim/discussion/
-    about: Questions about using DWSIM. This repository is for case submissions only.
   - name: DWSIM Discussions
     url: https://github.com/DanWBR/dwsim10/discussions
-    about: General discussion, ideas, and help.
+    about: Questions about using DWSIM, ideas, and help. This repository is for case submissions only.
   - name: FOSSEE DWSIM flowsheeting project
     url: https://dwsim.fossee.in/
     about: Another large collection of user-contributed DWSIM flowsheets.

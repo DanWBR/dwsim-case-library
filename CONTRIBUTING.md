@@ -30,6 +30,8 @@ A short, well-documented case beats a large, unexplained one.
 
 Open a **Case submission** issue from the [issue templates](../../issues/new/choose) and fill in the fields. A maintainer will turn it into a case folder and credit you. This is the easiest path if you do not use git.
 
+To attach the flowsheet: GitHub does not accept a raw `.dwxmz` in the drag-and-drop box, but a `.dwxmz` is already a zip, so rename it to `.zip` (or zip it) and drag it in. This only applies to the issue form; a pull request can commit the `.dwxmz` directly.
+
 ### Pull request
 
 1. Copy `templates/CASE_TEMPLATE.md` into the right category under `cases/`.

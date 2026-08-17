@@ -101,5 +101,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Attach the DWSIM flowsheet (`.dwxmz`) and any figures by dragging them into this text box.
+        Attach the DWSIM flowsheet and any figures by dragging them into the comment box above.
+        GitHub does not accept a raw `.dwxmz` attachment, but a `.dwxmz` is already a zip file, so just
+        rename it to `.zip` (or zip it) before dragging it in. Figures (PNG, etc.) attach directly.
         By submitting, you agree the write-up is published under CC BY 4.0 and you have the right to publish everything included.

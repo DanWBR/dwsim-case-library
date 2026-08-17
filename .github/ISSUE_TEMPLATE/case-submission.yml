@@ -41,10 +41,16 @@ body:
       label: Category
       options:
         - crude-distillation
+        - refining-conversion
         - hydrotreating
         - gas-processing
+        - carbon-capture
         - separation-processes
         - reaction-systems
+        - bioprocesses
+        - electrolytes-and-aqueous
+        - clean-energy
+        - fluid-flow-and-piping
         - heat-integration-utilities
         - other
     validations:

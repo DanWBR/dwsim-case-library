@@ -24,11 +24,17 @@ The goal is simple: shorten the learning curve for new users and show what DWSIM
 | Category | Folder | Examples |
 |---|---|---|
 | Crude and vacuum distillation | [`cases/crude-distillation`](cases/crude-distillation) | atmospheric crude unit, vacuum tower |
+| Refining conversion | [`cases/refining-conversion`](cases/refining-conversion) | FCC, reforming, coking, alkylation |
 | Hydrotreating and hydrocracking | [`cases/hydrotreating`](cases/hydrotreating) | diesel HDS, naphtha hydrotreater |
 | Gas processing | [`cases/gas-processing`](cases/gas-processing) | dehydration, amine sweetening, NGL recovery |
+| Carbon capture and utilization | [`cases/carbon-capture`](cases/carbon-capture) | amine CO2 capture, CO2 transport and storage |
 | Separation processes | [`cases/separation-processes`](cases/separation-processes) | distillation, absorption, extraction |
 | Reaction systems | [`cases/reaction-systems`](cases/reaction-systems) | reactors, kinetics, equilibrium |
-| Heat integration and utilities | [`cases/heat-integration-utilities`](cases/heat-integration-utilities) | heat exchanger networks, steam systems |
+| Bioprocesses | [`cases/bioprocesses`](cases/bioprocesses) | anaerobic digestion, fermentation, biogas |
+| Electrolytes and aqueous systems | [`cases/electrolytes-and-aqueous`](cases/electrolytes-and-aqueous) | sour water, acid gas, brines, seawater |
+| Clean energy | [`cases/clean-energy`](cases/clean-energy) | fuel cells, electrolyzers, hydrogen |
+| Fluid flow and piping | [`cases/fluid-flow-and-piping`](cases/fluid-flow-and-piping) | pipe networks, hydraulics, relief |
+| Heat integration and utilities | [`cases/heat-integration-utilities`](cases/heat-integration-utilities) | exchanger networks, fired heaters, chillers, steam |
 | Other processes | [`cases/other`](cases/other) | anything that does not fit above |
 
 Each case is a folder with a `README.md` built from the [case template](templates/CASE_TEMPLATE.md), plus any files it needs.

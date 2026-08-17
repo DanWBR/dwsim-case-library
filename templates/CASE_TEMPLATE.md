@@ -6,7 +6,7 @@
 
 # <Case title>
 
-**Category:** <crude-distillation | hydrotreating | gas-processing | separation-processes | reaction-systems | heat-integration-utilities | other>
+**Category:** <crude-distillation | refining-conversion | hydrotreating | gas-processing | carbon-capture | separation-processes | reaction-systems | bioprocesses | electrolytes-and-aqueous | clean-energy | fluid-flow-and-piping | heat-integration-utilities | other>
 **Status:** community <!-- a maintainer changes this to "verified" after reproduction -->
 **DWSIM version:** <e.g. 10.2.0>
 **Contributor:** <name or handle, optional>

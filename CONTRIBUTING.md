@@ -62,11 +62,17 @@ cases/
 Pick the closest fit. If nothing fits, use `other` and suggest a new category in your submission.
 
 - `crude-distillation` - atmospheric and vacuum distillation of crude oil.
+- `refining-conversion` - catalytic cracking, reforming, hydrocracking, coking, alkylation, isomerization.
 - `hydrotreating` - hydrotreating and hydrocracking.
 - `gas-processing` - dehydration, sweetening, NGL recovery, LNG.
+- `carbon-capture` - CO2 capture, amine absorption, CO2 transport and storage.
 - `separation-processes` - distillation, absorption, extraction, flash, membranes.
 - `reaction-systems` - reactors, kinetics, equilibrium, conversion.
-- `heat-integration-utilities` - heat exchanger networks, steam and utility systems.
+- `bioprocesses` - anaerobic digestion (ADM1), fermentation, biogas, algae, wastewater treatment.
+- `electrolytes-and-aqueous` - sour water, acid gas, brines, seawater, electrolyte systems.
+- `clean-energy` - fuel cells, electrolyzers, hydrogen production, power-to-X.
+- `fluid-flow-and-piping` - pipe segments, pipe networks, hydraulics, pressure relief, restriction devices.
+- `heat-integration-utilities` - heat exchanger networks, fired heaters, chillers, steam and utility systems.
 - `other` - anything else.
 
 ## Licensing and consent

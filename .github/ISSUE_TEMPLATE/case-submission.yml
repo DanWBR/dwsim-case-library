@@ -1,0 +1,105 @@
+name: Case submission
+description: Share an industrial process case modeled in DWSIM
+title: "[Case]: "
+labels: ["case", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing a case. Please read the confidentiality checklist below before filling this in.
+        Only publish what you have the right to publish. Anonymize or normalize confidential plant data,
+        and check that any commercial-simulator comparison is allowed by that tool's license.
+
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Confidentiality checklist
+      description: All boxes must be ticked.
+      options:
+        - label: I have the right to publish this process description and data.
+          required: true
+        - label: No confidential plant data is exposed (removed, normalized, or anonymized).
+          required: true
+        - label: Any commercial-simulator comparison is allowed by that tool's license.
+          required: true
+        - label: Site names, company names, and personal data have been removed.
+          required: true
+        - label: I own the attached DWSIM flowsheet or have permission to share it.
+          required: false
+
+  - type: input
+    id: title
+    attributes:
+      label: Case title
+      placeholder: Atmospheric crude unit, 40 kbpd
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - crude-distillation
+        - hydrotreating
+        - gas-processing
+        - separation-processes
+        - reaction-systems
+        - heat-integration-utilities
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: dwsim-version
+    attributes:
+      label: DWSIM version
+      placeholder: 10.2.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Process description
+      description: What the unit does, the feed, the main equipment, and the objective.
+    validations:
+      required: true
+
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Feed and operating conditions
+      description: Feed, compositions or assay, key temperatures and pressures, product specs. Normalize confidential values.
+    validations:
+      required: true
+
+  - type: textarea
+    id: thermo
+    attributes:
+      label: Thermodynamics
+      description: Property package and why you chose it. Interaction parameters or assays if relevant.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tuning
+    attributes:
+      label: Tuning and convergence notes
+      description: Initial estimates, solver settings, what did not work at first, what a new user should watch for.
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Results and comparison
+      description: Key results. If allowed, comparison against plant data or another simulator. Use relative errors when absolute values are confidential.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Attach the DWSIM flowsheet (`.dwxmz`) and any figures by dragging them into this text box.
+        By submitting, you agree the write-up is published under CC BY 4.0 and you have the right to publish everything included.

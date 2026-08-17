@@ -1,5 +1,7 @@
 # Verification
 
+**English** | [Português](VERIFICATION.pt-BR.md)
+
 A case can be **community** or **verified**.
 
 ## Community

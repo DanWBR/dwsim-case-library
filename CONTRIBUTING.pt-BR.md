@@ -85,7 +85,7 @@ Ao enviar, você concorda que:
 - Qualquer arquivo de fluxograma DWSIM que você anexar pode ser baixado e aberto por outros para aprendizado.
 - Você tem o direito de publicar tudo no envio.
 
-Veja [LICENSE.md](LICENSE.md) para o texto completo.
+Veja [LICENSE.pt-BR.md](LICENSE.pt-BR.md) para o texto completo.
 
 ## Revisão e verificação
 

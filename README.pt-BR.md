@@ -45,7 +45,7 @@ Cada caso é uma pasta com um `README.md` construído a partir do [modelo de cas
 
 Dois jeitos, escolha o que for mais confortável:
 
-1. **Formulário web (sem git).** Abra uma issue de [Envio de caso](../../issues/new?template=case-submission.yml) e preencha os campos. Um mantenedor transforma em uma pasta de caso.
+1. **Formulário web (sem git).** Abra uma issue de [Envio de caso](../../issues/new?template=case-submission-pt.yml) e preencha os campos. Um mantenedor transforma em uma pasta de caso.
 2. **Pull request.** Copie o [`templates/CASE_TEMPLATE.md`](templates/CASE_TEMPLATE.md) para a pasta da categoria certa, preencha, adicione seus arquivos e abra um PR.
 
 Leia o [CONTRIBUTING.pt-BR.md](CONTRIBUTING.pt-BR.md) antes. Ele cobre o checklist de confidencialidade, os campos do modelo, a nomeação e como os casos são revisados.
@@ -55,7 +55,7 @@ Leia o [CONTRIBUTING.pt-BR.md](CONTRIBUTING.pt-BR.md) antes. Ele cobre o checkli
 - Casos de **comunidade** são publicados como enviados. São úteis, mas não foram checados de forma independente.
 - Casos **verificados** foram reproduzidos por um mantenedor ou por um segundo contribuidor: o fluxograma abre, resolve e bate com os resultados relatados. Casos verificados ganham um selo e aparecem primeiro em cada categoria.
 
-Os critérios de verificação estão em [VERIFICATION.md](VERIFICATION.md).
+Os critérios de verificação estão em [VERIFICATION.pt-BR.md](VERIFICATION.pt-BR.md).
 
 ## Confidencialidade e licenciamento
 
@@ -63,7 +63,7 @@ Isto importa, por favor leia antes de enviar.
 
 - **Publique só o que você tem permissão de publicar.** Dado de planta real costuma ser confidencial. Se não puder compartilhar valores absolutos, compartilhe a forma do problema: vazões normalizadas, erros relativos, tendências. Anonimize nomes de correntes, de sites e qualquer detalhe identificável.
 - **Comparações com software comercial.** Algumas licenças de simulador restringem a publicação de comparações de benchmark. Verifique sua licença antes de publicar números de Aspen, HYSYS, PRO/II ou similares. Na dúvida, descreva o acordo de forma qualitativa em vez de publicar a saída bruta do concorrente.
-- **Licença do que você envia.** Os textos e figuras dos casos são publicados sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Os arquivos de fluxograma do DWSIM que você anexar são compartilhados para outros abrirem e aprenderem. Ao enviar, você confirma que tem o direito de publicar o material e concorda com estes termos. Veja [LICENSE.md](LICENSE.md).
+- **Licença do que você envia.** Os textos e figuras dos casos são publicados sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Os arquivos de fluxograma do DWSIM que você anexar são compartilhados para outros abrirem e aprenderem. Ao enviar, você confirma que tem o direito de publicar o material e concorda com estes termos. Veja [LICENSE.pt-BR.md](LICENSE.pt-BR.md).
 
 ## Relação com o FOSSEE
 

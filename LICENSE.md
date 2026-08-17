@@ -1,5 +1,7 @@
 # Licensing
 
+**English** | [Português](LICENSE.pt-BR.md)
+
 This library holds two kinds of material, licensed differently.
 
 ## Case write-ups (text and figures)

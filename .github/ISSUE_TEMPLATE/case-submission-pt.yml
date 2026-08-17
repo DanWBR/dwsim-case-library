@@ -1,0 +1,126 @@
+name: Envio de caso (Português)
+description: Compartilhe um caso de processo industrial modelado no DWSIM
+title: "[Caso]: "
+labels: ["case", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por compartilhar um caso. Por favor, leia o checklist de confidencialidade abaixo antes de preencher.
+        Publique só o que você tem direito de publicar. Anonimize ou normalize dados de planta confidenciais,
+        e confira se qualquer comparação com um simulador comercial é permitida pela licença dessa ferramenta.
+
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Checklist de confidencialidade
+      description: Todas as caixas precisam estar marcadas.
+      options:
+        - label: Tenho o direito de publicar esta descrição de processo e estes dados.
+          required: true
+        - label: Nenhum dado de planta confidencial é exposto (removido, normalizado ou anonimizado).
+          required: true
+        - label: Qualquer comparação com simulador comercial é permitida pela licença dessa ferramenta.
+          required: true
+        - label: Nomes de site, de empresa e dados pessoais foram removidos.
+          required: true
+        - label: Sou o dono do fluxograma DWSIM anexado ou tenho permissão para compartilhá-lo.
+          required: false
+
+  - type: input
+    id: title
+    attributes:
+      label: Título do caso
+      placeholder: Torre de destilação atmosférica, 40 kbpd
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      options:
+        - crude-distillation
+        - refining-conversion
+        - hydrotreating
+        - gas-processing
+        - carbon-capture
+        - separation-processes
+        - reaction-systems
+        - bioprocesses
+        - electrolytes-and-aqueous
+        - clean-energy
+        - fluid-flow-and-piping
+        - heat-integration-utilities
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: dwsim-version
+    attributes:
+      label: Versão do DWSIM
+      placeholder: 10.2.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Idioma
+      description: O idioma do seu texto. Inglês tem mais alcance, mas português ou bilíngue são bem-vindos.
+      options:
+        - Português
+        - English
+        - English + Português
+        - Outro (informe na descrição)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição do processo
+      description: O que a unidade faz, a carga, os principais equipamentos e o objetivo.
+    validations:
+      required: true
+
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Carga e condições operacionais
+      description: Carga, composições ou análise, temperaturas e pressões principais, especificações de produto. Normalize valores confidenciais.
+    validations:
+      required: true
+
+  - type: textarea
+    id: thermo
+    attributes:
+      label: Termodinâmica
+      description: Pacote termodinâmico e por que você o escolheu. Parâmetros de interação ou análises, se for o caso.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tuning
+    attributes:
+      label: Notas de ajuste e convergência
+      description: Estimativas iniciais, parâmetros do solver, o que não funcionou de início, o que um novo usuário deve observar.
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Resultados e comparação
+      description: Resultados principais. Se permitido, comparação com dados de planta ou de outro simulador. Use erros relativos quando os valores absolutos forem confidenciais.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Anexe o fluxograma do DWSIM e as figuras arrastando para a caixa de comentário acima.
+        O GitHub não aceita um `.dwxmz` cru como anexo, mas um `.dwxmz` já é um zip, então renomeie para `.zip`
+        (ou compacte) antes de arrastar. Figuras (PNG, etc.) anexam direto.
+        Ao enviar, você concorda que o texto é publicado sob CC BY 4.0 e que tem o direito de publicar tudo que incluiu.

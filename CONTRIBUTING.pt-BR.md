@@ -97,6 +97,6 @@ Você pode ajudar verificando o caso de outra pessoa: abra o fluxograma, execute
 
 ## Estilo
 
-- Inglês é preferível para a biblioteca continuar útil no mundo todo, mas textos em português ou bilíngues são bem-vindos. Informe o idioma no campo **Language** do caso, e se você escrever em outra língua, um resumo curto em inglês no topo ajuda outros a encontrar o caso. Uma versão em segundo idioma também pode ser adicionada como arquivo extra (por exemplo `README.pt-BR.md` dentro da pasta do caso).
+- Inglês é preferível para a biblioteca continuar útil no mundo todo, mas textos em português ou bilíngues são bem-vindos. Informe o idioma no campo **Language**. Para qualquer idioma que não seja inglês ou português, inclua um resumo curto em inglês no topo e preencha os campos estruturados (condições, termodinâmica e a tabela de resultados), para que o caso possa ser indexado e verificado sem ler o texto completo. A verificação em si independe do idioma: abrir o fluxograma, executar e conferir os números não depende da prosa. Uma versão em segundo idioma também pode ser adicionada como arquivo extra (por exemplo `README.pt-BR.md` dentro da pasta do caso).
 - Use unidades SI e informe o sistema de unidades se você fugir disso.
 - Prefira linguagem simples e específica. "A carga do refervedor teve que subir cerca de 8% acima do valor de projeto para bater a especificação de fundo" é mais útil que "foi difícil convergir".

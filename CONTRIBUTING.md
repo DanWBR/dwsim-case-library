@@ -97,6 +97,6 @@ You can help by verifying someone else's case: open the flowsheet, run it, and c
 
 ## Style
 
-- English is preferred so the library stays usable worldwide, but Portuguese or bilingual write-ups are welcome. State the language in the **Language** field of the case, and if you write in another language, a short English summary at the top helps others find it. A second-language version of a case can also be added as an extra file (for example `README.pt-BR.md` inside the case folder).
+- English is preferred so the library stays usable worldwide, but Portuguese or bilingual write-ups are welcome. State the language in the **Language** field. For any language other than English or Portuguese, include a short English summary at the top and fill in the structured fields (conditions, thermodynamics, and the results table), so the case can be indexed and verified without reading the full write-up. Verification itself is language independent: opening the flowsheet, running it, and checking the numbers does not depend on the prose. A second-language version can also be added as an extra file (for example `README.pt-BR.md` inside the case folder).
 - Use SI units, and state the unit system if you deviate.
 - Prefer plain, specific language. "The reboiler duty had to be raised about 8% over the design value to hit the bottoms spec" is more useful than "it was hard to converge".

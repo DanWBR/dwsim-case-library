@@ -41,6 +41,23 @@ The goal is simple: shorten the learning curve for new users and show what DWSIM
 
 Each case is a folder with a `README.md` built from the [case template](templates/CASE_TEMPLATE.md), plus any files it needs.
 
+### Published cases
+
+| Case | Category | Highlights |
+|---|---|---|
+| [Natural gas HC dew-point control (JT self-refrigeration)](cases/gas-processing/natural-gas-dew-point-control) | gas-processing | gas-gas exchanger + JT valve closed with a recycle; NGL recovery; sales-gas C5 halved |
+| [Propane refrigeration cycle (closed loop)](cases/heat-integration-utilities/propane-refrigeration-cycle) | heat-integration-utilities | first law closes < 0.01 %; COP 2.62 |
+| [Steam methane reforming hydrogen plant](cases/reaction-systems/steam-methane-reforming-h2) | reaction-systems | two Gibbs reactors (reformer + shift); 89 % CH4 conversion; exact carbon balance |
+| [Ammonia synthesis, single pass](cases/reaction-systems/ammonia-synthesis-single-pass) | reaction-systems | equilibrium-limited at 200 bar / 700 K; exact H/N atom balances |
+| [Methanol synthesis from syngas](cases/reaction-systems/methanol-synthesis-syngas) | reaction-systems | Gibbs reactor + distillation; 99.8 mol% MeOH distillate |
+| [Ethanol distillery](cases/separation-processes/ethanol-distillery) | separation-processes | fermentation → degassing → 25-stage column; distillate below the azeotrope |
+| [Benzene/toluene distillation with feed preheat](cases/separation-processes/benzene-toluene-distillation) | separation-processes | UA-rated preheater; 99.99 % overhead / 99.98 % bottoms |
+| [Biogas-to-grid](cases/bioprocesses/biogas-to-grid) | bioprocesses | anaerobic digester + amine upgrader; H2S path verified end to end |
+| [Hydroelectric turbine with heat recovery](cases/clean-energy/hydroelectric-heat-recovery) | clean-energy | 20.8 kW = ṁ·g·h·η exactly |
+| [Green hydrogen: solar + electrolysis](cases/clean-energy/green-hydrogen-solar-electrolysis) | clean-energy | H2 production on Faraday's law; ~48 kWh/kg |
+
+These ten cases are generated and continuously verified by automated tests in the DWSIM repository (`tests/DWSIM.FluentAPI.Tests/Samples`): each flowsheet is built through the fluent API, solved, checked for physical consistency, saved, then reloaded and re-solved from the saved file.
+
 ## Contribute a case
 
 Two ways, pick whichever you are comfortable with:

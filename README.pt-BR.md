@@ -41,6 +41,23 @@ O objetivo é simples: encurtar a curva de aprendizado de novos usuários e most
 
 Cada caso é uma pasta com um `README.md` construído a partir do [modelo de caso](templates/CASE_TEMPLATE.md), mais os arquivos que ele precisar.
 
+### Casos publicados
+
+| Caso | Categoria | Destaques |
+|---|---|---|
+| [Controle de ponto de orvalho de gás natural (JT auto-refrigerado)](cases/gas-processing/natural-gas-dew-point-control) | gas-processing | trocador gás-gás + válvula JT fechados com reciclo; recuperação de LGN; C5 no gás de venda cai pela metade |
+| [Ciclo de refrigeração a propano (malha fechada)](cases/heat-integration-utilities/propane-refrigeration-cycle) | heat-integration-utilities | primeira lei fecha < 0,01 %; COP 2,62 |
+| [Planta de hidrogênio por reforma a vapor de metano](cases/reaction-systems/steam-methane-reforming-h2) | reaction-systems | dois reatores de Gibbs (reformador + shift); 89 % de conversão de CH4; balanço de carbono exato |
+| [Síntese de amônia, passe único](cases/reaction-systems/ammonia-synthesis-single-pass) | reaction-systems | limitada pelo equilíbrio a 200 bar / 700 K; balanços atômicos H/N exatos |
+| [Síntese de metanol a partir de gás de síntese](cases/reaction-systems/methanol-synthesis-syngas) | reaction-systems | reator de Gibbs + destilação; destilado com 99,8 mol% de MeOH |
+| [Destilaria de etanol](cases/separation-processes/ethanol-distillery) | separation-processes | fermentação → degaseificação → coluna de 25 estágios; destilado abaixo do azeótropo |
+| [Destilação benzeno/tolueno com preaquecimento](cases/separation-processes/benzene-toluene-distillation) | separation-processes | preaquecedor especificado por UA; 99,99 % no topo / 99,98 % no fundo |
+| [Biogás para a rede](cases/bioprocesses/biogas-to-grid) | bioprocesses | digestor anaeróbio + upgrader de amina; caminho do H2S verificado de ponta a ponta |
+| [Turbina hidrelétrica com recuperação de calor](cases/clean-energy/hydroelectric-heat-recovery) | clean-energy | 20,8 kW = ṁ·g·h·η exato |
+| [Hidrogênio verde: solar + eletrólise](cases/clean-energy/green-hydrogen-solar-electrolysis) | clean-energy | produção de H2 na lei de Faraday; ~48 kWh/kg |
+
+Esses dez casos são gerados e verificados continuamente por testes automatizados no repositório do DWSIM (`tests/DWSIM.FluentAPI.Tests/Samples`): cada fluxograma é construído pela fluent API, resolvido, checado quanto à consistência física, salvo e depois recarregado e re-resolvido a partir do arquivo salvo.
+
 ## Contribuir com um caso
 
 Dois jeitos, escolha o que for mais confortável:

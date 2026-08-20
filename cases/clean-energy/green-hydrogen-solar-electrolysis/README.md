@@ -44,6 +44,7 @@ The solar panel block generates 200 kW of electric power on its energy port, whi
 | O2 production | 0.2879 mol/s | half the H2 rate | < 0.01 % |
 | H2 purity | 99.4 mol% | water-saturated at 5 bar | — |
 | Specific consumption | ~48 kWh/kg H2 | modern electrolyzers: 45–55 | consistent |
+| Overall mass balance | 1.000 kg/s in = 1.000 kg/s out | — | < 0.1 % |
 
 ## Files
 

@@ -57,6 +57,7 @@ Each case is a folder with a `README.md` built from the [case template](template
 | [Green hydrogen: solar + electrolysis](cases/clean-energy/green-hydrogen-solar-electrolysis) | clean-energy | H2 production on Faraday's law; ~48 kWh/kg |
 | [Polystyrene devolatilization](cases/separation-processes/polymer-devolatilization) | separation-processes | PC-SAFT non-volatile polymer flash; 99 wt% melt, 99.7 % solvent recovered |
 | [Polymer solution cloud point](cases/separation-processes/polymer-cloud-point) | separation-processes | PC-SAFT liquid-liquid demixing of polypropylene/n-pentane; auto-seeded split |
+| [Copolymer devolatilization](cases/separation-processes/copolymer-devolatilization) | separation-processes | PC-SAFT segment-based copolymer (ethylene-co-propylene); 99.8 wt% melt |
 
 These cases are generated and continuously verified by automated tests in the DWSIM repository (`tests/DWSIM.FluentAPI.Tests/Samples`): each flowsheet is built through the fluent API, solved, checked for physical consistency, saved, then reloaded and re-solved from the saved file.
 

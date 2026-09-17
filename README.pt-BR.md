@@ -52,6 +52,9 @@ Cada caso é uma pasta com um `README.md` construído a partir do [modelo de cas
 | [Síntese de metanol a partir de gás de síntese](cases/reaction-systems/methanol-synthesis-syngas) | reaction-systems | reator de Gibbs + destilação; destilado com 99,8 mol% de MeOH |
 | [Destilaria de etanol](cases/separation-processes/ethanol-distillery) | separation-processes | fermentação → degaseificação → coluna de 25 estágios; destilado abaixo do azeótropo |
 | [Destilação benzeno/tolueno com preaquecimento](cases/separation-processes/benzene-toluene-distillation) | separation-processes | preaquecedor especificado por UA; 99,99 % no topo / 99,98 % no fundo |
+| [Coluna benzeno/tolueno em dinâmica](cases/separation-processes/benzene-toluene-column-dynamics) | separation-processes | hidráulica dos pratos do dimensionamento de internos; controle de nível e pressão num degrau de 10 % na alimentação por uma hora |
+| [Partida da coluna benzeno/tolueno](cases/separation-processes/benzene-toluene-column-startup) | separation-processes | de uma coluna vazia e fria a 1 atm ao estado estacionário de projeto em duas horas: enchimento, rampa do refervedor, pressurização, refluxo, malhas de nível em automático |
+| [Parada da coluna benzeno/tolueno](cases/separation-processes/benzene-toluene-column-shutdown) | separation-processes | corte da alimentação, rampa do refervedor a zero sob refluxo total, tambor e fundo drenados pelos controladores de nível |
 | [Biogás para a rede](cases/bioprocesses/biogas-to-grid) | bioprocesses | digestor anaeróbio + upgrader de amina; caminho do H2S verificado de ponta a ponta |
 | [Turbina hidrelétrica com recuperação de calor](cases/clean-energy/hydroelectric-heat-recovery) | clean-energy | 20,8 kW = ṁ·g·h·η exato |
 | [Hidrogênio verde: solar + eletrólise](cases/clean-energy/green-hydrogen-solar-electrolysis) | clean-energy | produção de H2 na lei de Faraday; ~48 kWh/kg |

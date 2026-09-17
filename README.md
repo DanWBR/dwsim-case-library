@@ -59,6 +59,9 @@ Each case is a folder with a `README.md` built from the [case template](template
 | [Polymer solution cloud point](cases/separation-processes/polymer-cloud-point) | separation-processes | PC-SAFT liquid-liquid demixing of polypropylene/n-pentane; auto-seeded split |
 | [Copolymer devolatilization](cases/separation-processes/copolymer-devolatilization) | separation-processes | PC-SAFT segment-based copolymer (ethylene-co-propylene); 99.8 wt% melt |
 | [PEG dewatering](cases/separation-processes/peg-dewatering) | separation-processes | PC-SAFT association (hydrogen-bonding PEG/water); vacuum evaporation to ~70 wt% |
+| [Benzene/toluene column in dynamics](cases/separation-processes/benzene-toluene-column-dynamics) | separation-processes | tray hydraulics from the internals rating; level and pressure control riding a 10 % feed step for an hour |
+| [Benzene/toluene column startup](cases/separation-processes/benzene-toluene-column-startup) | separation-processes | from an empty, cold column at 1 atm to the design steady state in two hours: fill, reboiler ramp, pressurisation, reflux, level loops to automatic |
+| [Benzene/toluene column shutdown](cases/separation-processes/benzene-toluene-column-shutdown) | separation-processes | feed cut, reboiler ramp to zero under total reflux, drum and sump drained through the level controllers |
 | [Bulk styrene polymerization with monomer recovery](cases/reaction-systems/styrene-polymerization) | reaction-systems | free-radical polymerization reactor (method of moments); 78.5 % conversion, Mn 20 000, PDI 1.50; monomer devolatilized |
 
 These cases are generated and continuously verified by automated tests in the DWSIM repository (`tests/DWSIM.FluentAPI.Tests/Samples`): each flowsheet is built through the fluent API, solved, checked for physical consistency, saved, then reloaded and re-solved from the saved file.

@@ -37,6 +37,7 @@ The goal is simple: shorten the learning curve for new users and show what DWSIM
 | Clean energy | [`cases/clean-energy`](cases/clean-energy) | fuel cells, electrolyzers, hydrogen |
 | Fluid flow and piping | [`cases/fluid-flow-and-piping`](cases/fluid-flow-and-piping) | pipe networks, hydraulics, relief |
 | Heat integration and utilities | [`cases/heat-integration-utilities`](cases/heat-integration-utilities) | exchanger networks, fired heaters, chillers, steam |
+| Operator training | [`cases/operator-training`](cases/operator-training) | dynamic plants with alarms, interlocks, operator screens and scored scenarios for the Operator Training Simulator |
 | Other processes | [`cases/other`](cases/other) | anything that does not fit above |
 
 Each case is a folder with a `README.md` built from the [case template](templates/CASE_TEMPLATE.md), plus any files it needs.
@@ -63,6 +64,9 @@ Each case is a folder with a `README.md` built from the [case template](template
 | [Benzene/toluene column startup](cases/separation-processes/benzene-toluene-column-startup) | separation-processes | from an empty, cold column at 1 atm to the design steady state in two hours: fill, reboiler ramp, pressurisation, reflux, level loops to automatic |
 | [Benzene/toluene column shutdown](cases/separation-processes/benzene-toluene-column-shutdown) | separation-processes | feed cut, reboiler ramp to zero under total reflux, drum and sump drained through the level controllers |
 | [Bulk styrene polymerization with monomer recovery](cases/reaction-systems/styrene-polymerization) | reaction-systems | free-radical polymerization reactor (method of moments); 78.5 % conversion, Mn 20 000, PDI 1.50; monomer devolatilized |
+| [Gas-liquid separator: the training plant of the OTS course](cases/operator-training/gas-liquid-separator-ots) | operator-training | pressure and level loops; feed valve fails open at 01:00, H at 02:40, HH at 03:20, trip at 03:25; scored exercise, interlock and two operator screens |
+| [Two-stage separation train with a scenario pack](cases/operator-training/two-stage-separation-ots) | operator-training | HP 30 bar and LP 8 bar separators, level controller on a transmitter; seven scenarios incl. gas blow-by, with the alarm times measured; two example reports |
+| [Compressor aftercooler and knock-out drum with a scenario pack](cases/operator-training/compressor-aftercooler-ots) | operator-training | temperature loop on the cooling duty; cooling water shortfall, frozen and drifting transmitters, stuck level valve, air failure; 2 s step |
 
 These cases are generated and continuously verified by automated tests in the DWSIM repository (`tests/DWSIM.FluentAPI.Tests/Samples`): each flowsheet is built through the fluent API, solved, checked for physical consistency, saved, then reloaded and re-solved from the saved file.
 

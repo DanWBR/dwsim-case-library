@@ -16,6 +16,7 @@ Browse by process category. Verified cases are listed first in each.
 | [clean-energy](clean-energy) | Fuel cells, electrolyzers, hydrogen, power-to-X |
 | [fluid-flow-and-piping](fluid-flow-and-piping) | Pipe segments, pipe networks, hydraulics, relief |
 | [heat-integration-utilities](heat-integration-utilities) | Exchanger networks, fired heaters, chillers, steam |
+| [operator-training](operator-training) | Dynamic plants with alarms, interlocks, operator screens and scored scenarios for the Operator Training Simulator |
 | [other](other) | Anything that does not fit above |
 
 To add a case, see [CONTRIBUTING.md](../CONTRIBUTING.md).

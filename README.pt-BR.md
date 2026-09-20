@@ -37,6 +37,7 @@ O objetivo é simples: encurtar a curva de aprendizado de novos usuários e most
 | Energia limpa | [`cases/clean-energy`](cases/clean-energy) | células a combustível, eletrolisadores, hidrogênio |
 | Escoamento de fluidos e tubulação | [`cases/fluid-flow-and-piping`](cases/fluid-flow-and-piping) | redes de tubulação, hidráulica, alívio |
 | Integração energética e utilidades | [`cases/heat-integration-utilities`](cases/heat-integration-utilities) | redes de trocadores, fornos, chillers, vapor |
+| Treinamento de operadores | [`cases/operator-training`](cases/operator-training) | plantas dinâmicas com alarmes, intertravamentos, telas de operador e cenários pontuados para o Simulador de Treinamento de Operadores |
 | Outros processos | [`cases/other`](cases/other) | qualquer coisa que não se encaixe acima |
 
 Cada caso é uma pasta com um `README.md` construído a partir do [modelo de caso](templates/CASE_TEMPLATE.md), mais os arquivos que ele precisar.
@@ -58,6 +59,9 @@ Cada caso é uma pasta com um `README.md` construído a partir do [modelo de cas
 | [Biogás para a rede](cases/bioprocesses/biogas-to-grid) | bioprocesses | digestor anaeróbio + upgrader de amina; caminho do H2S verificado de ponta a ponta |
 | [Turbina hidrelétrica com recuperação de calor](cases/clean-energy/hydroelectric-heat-recovery) | clean-energy | 20,8 kW = ṁ·g·h·η exato |
 | [Hidrogênio verde: solar + eletrólise](cases/clean-energy/green-hydrogen-solar-electrolysis) | clean-energy | produção de H2 na lei de Faraday; ~48 kWh/kg |
+| [Separador gás-líquido: a planta do curso de OTS](cases/operator-training/gas-liquid-separator-ots) | operator-training | malhas de pressão e nível; válvula de alimentação falha aberta em 01:00, H em 02:40, HH em 03:20, trip em 03:25; exercício pontuado, intertravamento e duas telas de operador |
+| [Trem de separação em dois estágios com pacote de cenários](cases/operator-training/two-stage-separation-ots) | operator-training | separadores de 30 bar e 8 bar, controlador de nível lendo um transmissor; sete cenários incl. blow-by de gás, com os tempos de alarme medidos; dois relatórios de exemplo |
+| [Resfriador de descarga de compressor com vaso de knock-out e pacote de cenários](cases/operator-training/compressor-aftercooler-ots) | operator-training | malha de temperatura no duty de resfriamento; falta de água de resfriamento, transmissores congelado e com deriva, válvula de nível travada, falha de ar; passo de 2 s |
 
 Esses dez casos são gerados e verificados continuamente por testes automatizados no repositório do DWSIM (`tests/DWSIM.FluentAPI.Tests/Samples`): cada fluxograma é construído pela fluent API, resolvido, checado quanto à consistência física, salvo e depois recarregado e re-resolvido a partir do arquivo salvo.
 

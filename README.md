@@ -69,6 +69,7 @@ Each case is a folder with a `README.md` built from the [case template](template
 | [Compressor aftercooler and knock-out drum with a scenario pack](cases/operator-training/compressor-aftercooler-ots) | operator-training | temperature loop on the cooling duty; cooling water shortfall, frozen and drifting transmitters, stuck level valve, air failure; 2 s step |
 | [Cooling water pump on a variable-frequency drive](cases/fluid-flow-and-piping/pump-variable-frequency-drive) | fluid-flow-and-piping | curves measured at 1450 and 1750 rpm, read and blended at 1600 rpm: 62.8 m, 69.7 % |
 | [Metering pump under flow control (dynamic)](cases/fluid-flow-and-piping/dosing-pump-flow-control-dynamics) | fluid-flow-and-piping | positive displacement pump on a flow loop: setpoint step 1.894 -> 2.6 kg/s, 240 -> 329.4 rpm |
+| [Fire water ring of an LPG bulk plant](cases/fluid-flow-and-piping/fire-water-ring-network) | fluid-flow-and-piping | pipe network: 6 in and 4 in ring, four NBR 15186 conditions, and a fire opened by events in dynamics |
 | [Fuel gas booster compressor on its performance map](cases/gas-processing/compressor-performance-map) | gas-processing | head and efficiency map at 8000 / 10000 / 12000 rpm, interpolated at 11000 rpm; 44.0 kW |
 | [Letdown turboexpander on its measured power map](cases/gas-processing/turboexpander-performance-map) | gas-processing | power map at 14000 / 18000 / 22000 rpm; 255.9 kW at 20000 rpm, gas out at 255 K |
 

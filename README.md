@@ -67,6 +67,9 @@ Each case is a folder with a `README.md` built from the [case template](template
 | [Gas-liquid separator: the training plant of the OTS course](cases/operator-training/gas-liquid-separator-ots) | operator-training | pressure and level loops; feed valve fails open at 01:00, H at 02:40, HH at 03:20, trip at 03:25; scored exercise, interlock and two operator screens |
 | [Two-stage separation train with a scenario pack](cases/operator-training/two-stage-separation-ots) | operator-training | HP 30 bar and LP 8 bar separators, level controller on a transmitter; seven scenarios incl. gas blow-by, with the alarm times measured; two example reports |
 | [Compressor aftercooler and knock-out drum with a scenario pack](cases/operator-training/compressor-aftercooler-ots) | operator-training | temperature loop on the cooling duty; cooling water shortfall, frozen and drifting transmitters, stuck level valve, air failure; 2 s step |
+| [Cooling water pump on a variable-frequency drive](cases/fluid-flow-and-piping/pump-variable-frequency-drive) | fluid-flow-and-piping | curves measured at 1450 and 1750 rpm, read and blended at 1600 rpm: 62.8 m, 69.7 % |
+| [Fuel gas booster compressor on its performance map](cases/gas-processing/compressor-performance-map) | gas-processing | head and efficiency map at 8000 / 10000 / 12000 rpm, interpolated at 11000 rpm; 44.0 kW |
+| [Letdown turboexpander on its measured power map](cases/gas-processing/turboexpander-performance-map) | gas-processing | power map at 14000 / 18000 / 22000 rpm; 255.9 kW at 20000 rpm, gas out at 255 K |
 
 These cases are generated and continuously verified by automated tests in the DWSIM repository (`tests/DWSIM.FluentAPI.Tests/Samples`): each flowsheet is built through the fluent API, solved, checked for physical consistency, saved, then reloaded and re-solved from the saved file.
 

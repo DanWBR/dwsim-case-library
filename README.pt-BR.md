@@ -66,7 +66,7 @@ Cada caso é uma pasta com um `README.md` construído a partir do [modelo de cas
 | [Bomba dosadora sob controle de vazão (dinâmico)](cases/fluid-flow-and-piping/dosing-pump-flow-control-dynamics) | fluid-flow-and-piping | bomba de deslocamento positivo em malha de vazão: degrau de 1,894 para 2,6 kg/s, 240 para 329,4 rpm |
 | [Anel de combate a incêndio de uma planta de GLP](cases/fluid-flow-and-piping/fire-water-ring-network) | fluid-flow-and-piping | rede de tubulação: anel de 6" e 4", as quatro condições da NBR 15186 e um incêndio aberto por eventos em dinâmica |
 | [Compressor booster de gás combustível sobre seu mapa de desempenho](cases/gas-processing/compressor-performance-map) | gas-processing | mapa de altura e rendimento a 8000 / 10000 / 12000 rpm, interpolado a 11000 rpm; 44,0 kW |
-| [Turboexpansor de letdown sobre seu mapa de potência medido](cases/gas-processing/turboexpander-performance-map) | gas-processing | mapa de potência a 14000 / 18000 / 22000 rpm; 255,9 kW a 20000 rpm, gás saindo a 255 K |
+| [Turboexpansor de letdown sobre seu mapa de potência medido](cases/gas-processing/turboexpander-performance-map) | gas-processing | mapa de potência a 14000 / 18000 / 22000 rpm; 300,5 kW a 20000 rpm, gás saindo a 230 K |
 
 Esses dez casos são gerados e verificados continuamente por testes automatizados no repositório do DWSIM (`tests/DWSIM.FluentAPI.Tests/Samples`): cada fluxograma é construído pela fluent API, resolvido, checado quanto à consistência física, salvo e depois recarregado e re-resolvido a partir do arquivo salvo.
 

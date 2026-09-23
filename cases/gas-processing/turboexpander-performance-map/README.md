@@ -8,11 +8,11 @@
 
 ## Summary
 
-A city-gate letdown turboexpander described by the power its maker measured at 14000, 18000 and 22000 rpm against inlet actual flow. Running at 20000 rpm it generates 255.9 kW while dropping 2 kg/s of gas from 40 to 9.3 bar, and the gas leaves at 255 K, cold enough to be worth recovering duty from: a UA-rated exchanger warms it against a water stream that gives up 7.4 K.
+A city-gate letdown turboexpander described by the power its maker measured at 14000, 18000 and 22000 rpm against inlet actual flow. Running at 20000 rpm it generates 300.5 kW while dropping 2 kg/s of gas from 40 to 9.1 bar, and the gas leaves at 230 K, cold enough to be worth recovering duty from: a UA-rated exchanger warms it against a water stream that gives up 15.9 K.
 
 ## Process description
 
-2 kg/s of gas (92 wt% methane, 5 % ethane, 3 % nitrogen) at 40 bar and 40 °C enters EX-101, which expands it on its measured map and sends the shaft power out on an energy stream. The cold outlet at 255 K then passes through E-201 against 3 kg/s of warm water, and leaves for the distribution network.
+2 kg/s of gas (92 wt% methane, 5 % ethane, 3 % nitrogen) at 40 bar and 40 °C enters EX-101, which expands it on its measured map and sends the shaft power out on an energy stream. The cold outlet at 230 K then passes through E-201 against 3 kg/s of warm water, and leaves for the distribution network.
 
 ![PFD](turboexpander-performance-map.png)
 
@@ -43,19 +43,21 @@ The map, as entered in the curve editor (flow as actual m³/h at the inlet, powe
 ## Tuning and convergence notes
 
 - An expander map can be given as head or as power. When the power curves are the enabled ones, as here, the power read off them is the **fluid** power: the efficiency curve then converts it to the shaft power the machine delivers. Enabling head and power curves at the same speed makes the head win, so pick one.
-- The x axis is read as actual volumetric flow only when its unit carries `@ P,T`. At 40 bar the 2 kg/s of this case are about 240 m³/h, which is why the map is written between 100 and 400 m³/h.
+- The x axis is read as actual volumetric flow only when its unit carries `@ P,T`. At 40 bar the 2 kg/s of this case are about 260 m³/h, which is why the map is written between 100 and 400 m³/h.
 - Up to DWSIM 10.2.9 an expander in Performance Curves mode read its map and then generated nothing: the duty was only computed in the Head calculation mode, so the outlet came back at the inlet state. This case needs a newer build.
-- The cold outlet is what the letdown is for: without a recovery exchanger the gas reaches the network at 255 K, which the network would have to make up somewhere. E-201 is the cheapest way to show that in a flowsheet.
+- The cold outlet is what the letdown is for: without a recovery exchanger the gas reaches the network at 230 K, which the network would have to make up somewhere. E-201 is the cheapest way to show that in a flowsheet.
 
 ## Results
 
 | Quantity | DWSIM | Notes |
 |---|---|---|
-| Power at 18000 rpm | 237.2 kW | measured set |
-| Power at 20000 rpm | 255.9 kW | interpolated between the two |
-| Power at 22000 rpm | 274.4 kW | measured set |
-| Expander outlet | 255.1 K, 9.33 bar | from 313.15 K and 40 bar |
-| Water outlet | 310.7 K | from 318.15 K, 3 kg/s |
+| Power at 18000 rpm | 278.1 kW | measured set; outlet 236.4 K, 10.48 bar |
+| Power at 20000 rpm | 300.5 kW | interpolated between the two: fluid power 361.7 kW x 83.1 % efficiency |
+| Power at 22000 rpm | 322.7 kW | measured set; outlet 224.0 K, 7.88 bar |
+| Expander outlet | 230.1 K, 9.11 bar | from 313.15 K and 40 bar |
+| Inlet actual flow | 263 m³/h | at 40 bar, 313.15 K |
+| E-201 duty | 214.7 kW | UA = 4000 W/K; gas warmed to 279.5 K |
+| Water outlet | 302.3 K | from 318.15 K, 3 kg/s |
 | Gas mass balance | 2.000 kg/s | conserved |
 
 ## Files

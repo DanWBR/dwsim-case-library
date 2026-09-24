@@ -13,8 +13,9 @@ The benzene-toluene column of the companion cases ("Benzene-toluene column in dy
 reboiler steam is ramped to zero over twenty minutes while the reflux keeps running (total reflux),
 the pressure controller takes the condenser duty down as the boilup dies and the column falls back
 to its inert blanket, and the sump and the reflux drum are then drained through their level
-controllers by lowering the level setpoints. The flowsheet opens with the schedule configured:
-press play on "Shutdown".
+controllers by lowering the level setpoints. The flowsheet opens at the design steady state, stored
+as the state "Design" the schedule starts from, with the schedule configured: press play on
+"Shutdown".
 
 ## Process description
 
@@ -40,11 +41,11 @@ The procedure, as events of the "Shutdown" event set:
 
 | Item | Value | Unit | Notes |
 |---|---|---|---|
-| Initial state | design steady state | | 0.755 m in the drum, 1.00 m in the sump, 120 kPa at the top |
+| Initial state | design steady state | | 0.755 m in the drum, 1.00 m in the sump, 120 kPa at the top; stored in the file as the state "Design" the schedule starts from |
 | Feed | 100 to 0 | mol/s | cut at 1 min |
 | Reboiler duty | 5428 to 0 | kW | ramp from 1 to 21 min |
 | Minimum pressure | 101.3 | kPa | the inert blanket |
-| Integration | 2 s steps, 2 sub-steps | | 1 h of simulated time in about 12 min |
+| Integration | 2 s steps, 2 sub-steps | | 1 h of simulated time in six to twelve minutes of wall time |
 
 ## Thermodynamics
 
@@ -70,7 +71,9 @@ The procedure, as events of the "Shutdown" event set:
   reboiler still makes vapour, which condenses inside the column and heats the trays.
 - Draining through the level controllers: lowering a level setpoint (the PID property "SetPointAbs",
   by an event) opens the valve wide and drains the vessel; the flow through the valve is what the
-  pressure difference gives, about 13 kg/s for both.
+  pressure difference gives, about 13 kg/s for both. The column hands each product stream the most
+  its holdup can give over the next step (nine tenths of the liquid it holds), and the valve keeps its
+  flow under that, so a valve left open on an empty drum passes nothing.
 - While the boilup dies (3 to 20 min) the vapour reaches the condenser in bursts of a few hundred
   mol/s a minute apart rather than as a steady trickle: a tray that has just lost its vapour holds
   the next arrival until its free volume is full again and then passes it on. The bursts are
@@ -79,22 +82,22 @@ The procedure, as events of the "Shutdown" event set:
 
 ## Results
 
-The run integrates one hour in about ten minutes of wall time. What happens, in order:
+The run integrates one hour in six to twelve minutes of wall time. What happens, in order:
 
 | Time | Event |
 |---|---|
 | 1 min | feed cut; the bottoms valve closes within a minute and a half as LC-02 holds the sump level |
 | 1 to 21 min | reboiler duty ramps to zero; the top pressure falls to the blanket at 4 min, and from then on the vapour condenses inside the column on the trays cooled by the sub-cooled reflux |
-| 4 min | condenser duty at its minimum (1057 kW); the drum liquid cools and reaches the coolant temperature at 13 min |
-| 22 min | the reflux dies (the drum level falls below the dead height of the reflux line) |
+| 7 min | condenser duty at its minimum (1057 kW; still 4281 kW at 4 min, 2778 at 5, 1881 at 6); the drum liquid cools and reaches the coolant temperature at 13 min |
 | 21 min | reboiler duty zero; the column sits under its blanket, the trays slowly draining through their holes |
+| 22 min | the reflux dies (the drum level falls below the dead height of the reflux line) |
 | 25 min | LC-02 setpoint to 0.10 m: the bottoms valve opens fully and the sump drains to 0.19 m at 30 min, 0.05 m at 31 min |
 | 30 min | LC-01 setpoint to 0.05 m: the distillate valve opens and the drum drains to 0.1 m at 33 min, empty at 34 min |
 | 34 to 60 min | nothing left to move: the column is empty of liquid but for the films on the trays, at the blanket pressure |
 
 | Quantity | DWSIM | Notes |
 |---|---|---|
-| Top pressure, from 4 min on | 101.3 kPa | the blanket |
+| Top pressure, from 4.2 min on | 101.3 kPa | the blanket |
 | Bottom pressure, highest after the feed cut | 112 kPa | at 5 min |
 | Sump level, highest before the drain | 0.98 m | at 22 min; setpoint 1.00 m |
 | Bottoms flow, peak during the drain | 13.0 kg/s | LV-02 fully open |
@@ -106,16 +109,25 @@ The run integrates one hour in about ten minutes of wall time. What happens, in 
 What to look at: the pressure that falls to the blanket in three minutes once the reboiler duty
 starts down, the condenser that keeps cooling the drum to the coolant temperature, the vapour that
 stops reaching the condenser long before the reboiler is off, and the two drains, each a wide-open
-valve for a few minutes. The product purities mean little once the products stop flowing; the
-distillate composition shown after 30 min is that of the last liquid the drum held. No comparison
-against plant or another simulator: the case is a model exercise.
+valve for a few minutes. Two columns of the spreadsheet need reading with care:
+
+- The distillate benzene fraction holds at 0.890 from 20 min through the drain. Nothing reaches the
+  drum after the last vapour burst, so the liquid it holds keeps that composition and the drain
+  carries it out; once the drum is empty the stream shows the film left on the condenser stage
+  (0.898 from 45 min).
+- The distillate valve stays about 20 % open after the drum is empty (the level controller settles
+  there with nothing to control), and the flow through it is zero: the column tells the valve what
+  the drum can give. The product purities mean little once the products stop flowing.
+
+No comparison against plant or another simulator: the case is a model exercise.
 
 ![Shutdown](shutdown-response.png)
 
 ## Files
 
-- `benzene-toluene-column-shutdown.dwxmz` - the flowsheet, steady state solved, dynamics schedule
-  "Shutdown" configured with the integrator, the event set and the monitored variables.
+- `benzene-toluene-column-shutdown.dwxmz` - the flowsheet at the design steady state, stored as
+  the state "Design" the schedule starts from, dynamics schedule "Shutdown" configured with the
+  integrator, the event set and the monitored variables.
 - `benzene-toluene-column-shutdown.png` - the PFD.
 - `shutdown-response.png` - the monitored variables over the hour.
 - `shutdown-run.csv` - the monitored variables, one row per integration step.

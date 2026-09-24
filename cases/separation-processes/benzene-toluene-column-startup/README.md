@@ -96,6 +96,11 @@ pressure passes the setpoint the controller takes over, which is what pressurise
 - The product boundaries are set to 0.9 bar after the steady-state solve; the steady-state valve
   calculation would otherwise leave them at the pressure a half-open valve produces, and a column
   at atmospheric pressure could not push its bottoms out.
+- The column diameter is a dynamic input. Every steady-state solve of the column re-estimates its
+  diameter from a flooding correlation (2.78 m here), and the dynamic model reads that field for
+  the tray areas and the drum and sump volumes. The file carries the rated 2.58 m; after a
+  steady-state re-solve, put 2.58 m back in the column's estimated diameter before pressing play,
+  or the column fills 16 % slower than in the run recorded here.
 - Vapour that arrives at a tray passes on at once: what a stage sends up is what arrived to it during
   the sub-step plus a slow correction of its inventory. A rate limiter on the vapour, meant to damp
   the pressure-flash loop in normal operation, held vapour back on the trays during the startup and

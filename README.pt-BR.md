@@ -67,6 +67,7 @@ Cada caso é uma pasta com um `README.md` construído a partir do [modelo de cas
 | [Anel de combate a incêndio de uma planta de GLP](cases/fluid-flow-and-piping/fire-water-ring-network) | fluid-flow-and-piping | rede de tubulação: anel de 6" e 4", as quatro condições da NBR 15186 e um incêndio aberto por eventos em dinâmica |
 | [Compressor booster de gás combustível sobre seu mapa de desempenho](cases/gas-processing/compressor-performance-map) | gas-processing | mapa de altura e rendimento a 8000 / 10000 / 12000 rpm, interpolado a 11000 rpm; 44,0 kW |
 | [Turboexpansor de letdown sobre seu mapa de potência medido](cases/gas-processing/turboexpander-performance-map) | gas-processing | mapa de potência a 14000 / 18000 / 22000 rpm; 300,5 kW a 20000 rpm, gás saindo a 230 K |
+| [Captura de CO2 pré-combustão com um líquido iônico](cases/carbon-capture/ionic-liquid-precombustion-capture) | carbon-capture | absorção física em [hmim][Tf2N] (PC-SAFT) a 40 bar, regenerado só por pressão; 99,2 % do CO2 capturado, 99,6 % do H2 recuperado; dois reciclos fechados |
 
 Esses dez casos são gerados e verificados continuamente por testes automatizados no repositório do DWSIM (`tests/DWSIM.FluentAPI.Tests/Samples`): cada fluxograma é construído pela fluent API, resolvido, checado quanto à consistência física, salvo e depois recarregado e re-resolvido a partir do arquivo salvo.
 

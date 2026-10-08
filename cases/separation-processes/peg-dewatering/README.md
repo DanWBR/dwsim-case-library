@@ -2,13 +2,13 @@
 
 **Category:** separation-processes
 **Status:** community
-**DWSIM version:** 10.2.0
+**DWSIM version:** 10.2.11
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
 ## Summary
 
-A 20 wt% poly(ethylene glycol) solution in water is concentrated by flashing off water under a mild vacuum. Heated to 355 K at 0.4 bar, the water leaves as pure vapour and the PEG is concentrated to about 70 wt%. What makes this case distinct from the other polymer separations is that PEG is a hydrogen-bonding polymer: it associates strongly with water, which makes water's activity in the solution steeply non-ideal and defeats an ordinary flash. It is modelled with PC-SAFT's association term and solved by the PC-SAFT flash.
+A 20 wt% poly(ethylene glycol) solution in water is concentrated by flashing off water under a mild vacuum. Heated to 355 K at 0.4 bar, the water leaves as pure vapour and the PEG is concentrated to about 84 wt%. What makes this case distinct from the other polymer separations is that PEG is a hydrogen-bonding polymer: it associates strongly with water, which makes water's activity in the solution steeply non-ideal and defeats an ordinary flash. It is modelled with PC-SAFT's association term and solved by the PC-SAFT flash.
 
 ## Process description
 
@@ -45,7 +45,7 @@ The most valuable part of this case.
 | Mass balance F = vapour + concentrate | 1.000 = vapour + concentrate | closes |
 | Water vapour purity | > 99.99 wt% water | no polymer carryover |
 | PEG in the vapour | < 1 ppm | non-volatile |
-| Concentrate | ~70 wt% PEG | up from 20 wt% feed |
+| Concentrate | ~84 wt% PEG | up from 20 wt% feed |
 
 ## Files
 

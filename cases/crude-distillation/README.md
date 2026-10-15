@@ -6,6 +6,8 @@ Atmospheric and vacuum distillation of crude oil: preflash, crude towers, side s
 
 | Case | Status | DWSIM | Contributor |
 |---|---|---|---|
+| [straight-run-distillate-curves](straight-run-distillate-curves) | community | 10.2.12 | @DanWBR |
+| [straight-run-distillate-secondary-specs](straight-run-distillate-secondary-specs) | community | 10.2.12 | @DanWBR |
 | [example-atmospheric-crude-unit](example-atmospheric-crude-unit) | example | 10.2.0 | maintainers |
 
 <!-- Verified cases go at the top. Add a row per case. -->

@@ -8,7 +8,7 @@
 
 ## Summary
 
-The distillate part of a medium crude (everything that boils up to 420 C) is fractionated into naphtha, kerosene, diesel and a light gas oil. A Distillation Curves utility attached to each product reports its TBP, ASTM D86, D1160, D2887 and EFV curves together with the flash point, densities, viscosities and cetane index, so each cut can be checked against the pool it goes to. With this crude the kerosene meets the Jet A-1 flash point, front end, end point and density limits and misses the freezing point; the diesel is too heavy and too dense for EN 590.
+The distillate part of a medium crude (everything that boils up to 420 C) is fractionated into naphtha, kerosene, diesel and a light gas oil. A Distillation Curves utility attached to each product reports its TBP, ASTM D86, D1160, D2887 and EFV curves together with the flash point, densities, viscosities and cetane index, so each cut can be checked against the pool it goes to. With this crude the kerosene meets the Jet A-1 flash point, front end, end point and density limits and misses the freezing point; the diesel meets the EN 590 cetane index and is too heavy and too dense.
 
 ## Process description
 
@@ -38,6 +38,7 @@ The Distillation Curves utility of the kerosene, opened from the stream:
 - **Property package:** Peng-Robinson.
 - **Why this package:** a hydrocarbon mixture at low pressure; the cubic equation gives the vapour-liquid equilibrium and the liquid densities the product properties need.
 - **Pseudocomponents:** created with the fluent API from the boiling point, specific gravity and molecular weight of each cut, with critical properties by Riazi-Daubert and the acentric factor by Lee-Kesler, as the petroleum characterization tools do.
+- **Product densities:** the Distillation Curves utility takes the density at 15 C from the compounds' specific gravities and corrects it for temperature with the property package.
 
 ## Tuning and convergence notes
 
@@ -50,10 +51,10 @@ The Distillation Curves utility of the kerosene, opened from the stream:
 
 | Product | Flow (kg/s) | D86 10 % | D86 50 % | D86 95 % | D86 FBP | Flash point | Density at 15 C | Cetane index (D4737) |
 |---|---|---|---|---|---|---|---|---|
-| Naphtha | 16.0 | 76.7 C | 113.0 C | 186.4 C | 229.7 C | | 750.8 kg/m3 | |
-| Kerosene | 13.7 | 176.4 C | 205.4 C | 269.7 C | 300.0 C | 50.5 C | 802.7 kg/m3 | |
-| Diesel | 21.1 | 247.8 C | 296.0 C | 378.0 C | 388.3 C | 99.8 C | 874.8 kg/m3 | 45.6 |
-| Light gas oil | 9.2 | 340.3 C | 362.4 C | 394.6 C | 400.6 C | 163.6 C | 946.0 kg/m3 | |
+| Naphtha | 16.0 | 76.7 C | 113.0 C | 186.4 C | 229.7 C | | 748.8 kg/m3 | |
+| Kerosene | 13.7 | 176.4 C | 205.4 C | 269.7 C | 300.0 C | 50.5 C | 807.2 kg/m3 | |
+| Diesel | 21.1 | 247.8 C | 296.0 C | 378.0 C | 388.3 C | 99.8 C | 855.9 kg/m3 | 52.4 |
+| Light gas oil | 9.2 | 340.3 C | 362.4 C | 394.0 C | 399.1 C | 163.6 C | 890.3 kg/m3 | |
 
 Pool check:
 
@@ -62,14 +63,14 @@ Pool check:
 | Kerosene | flash point (closed cup) | 50.5 C | at least 38 C (Jet A-1) | meets |
 | Kerosene | D86 10 % | 176.4 C | at most 205 C | meets |
 | Kerosene | D86 final boiling point | 300.0 C | at most 300 C | at the limit |
-| Kerosene | density at 15 C | 802.7 kg/m3 | 775 to 840 kg/m3 | meets |
+| Kerosene | density at 15 C | 807.2 kg/m3 | 775 to 840 kg/m3 | meets |
 | Kerosene | freezing point (API 2B11.1) | -44.7 C | at most -47 C | misses |
 | Diesel | flash point | 99.8 C | above 55 C (EN 590) | meets |
 | Diesel | D86 95 % | 378.0 C | at most 360 C | misses |
-| Diesel | density at 15 C | 874.8 kg/m3 | 820 to 845 kg/m3 | misses |
-| Diesel | calculated cetane index | 45.6 | at least 46 | misses |
+| Diesel | density at 15 C | 855.9 kg/m3 | 820 to 845 kg/m3 | misses |
+| Diesel | calculated cetane index | 52.4 | at least 46 | meets |
 
-The flash point and the freezing point come from API Technical Data Book correlations (2B7.1 from the D86 10 % point, 2B11.1 from the mean average boiling point and gravity); treat them as estimates. The diesel results reflect a heavy, aromatic-leaning crude (Watson K 11.8): its straight-run diesel needs a lighter cut and hydrotreating before it meets EN 590. The companion case `straight-run-distillate-secondary-specs` converges this column on product end points.
+The flash point and the freezing point come from API Technical Data Book correlations (2B7.1 from the D86 10 % point, 2B11.1 from the mean average boiling point and gravity); treat them as estimates. The diesel results reflect a heavy, aromatic-leaning crude (Watson K 11.8): its straight-run diesel needs a lighter cut before it meets EN 590. The companion case `straight-run-distillate-secondary-specs` converges this column on product end points.
 
 ## Files
 

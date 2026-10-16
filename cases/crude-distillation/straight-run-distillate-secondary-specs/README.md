@@ -47,7 +47,7 @@ Same feed and column as the companion case: 60 kg/s of straight-run distillate a
 | Diesel | 21.1 kg/s, D86 95 % 378.0 C | 19.5 kg/s, D86 95 % 374.1 C |
 | Light gas oil | 9.2 kg/s | 9.3 kg/s |
 | Kerosene flash point | 50.5 C | 58.0 C |
-| Diesel calculated cetane index | 45.6 | 46.0 |
+| Diesel calculated cetane index | 52.4 | 53.2 |
 
 Smaller side draws push their light ends up the column: the naphtha grows and gets heavier, the kerosene loses its front end (its flash point rises by 7.5 C) and gains on its back end, and the diesel loses part of its heavy end to the light gas oil.
 

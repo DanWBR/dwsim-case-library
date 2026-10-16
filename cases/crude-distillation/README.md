@@ -6,6 +6,7 @@ Atmospheric and vacuum distillation of crude oil: preflash, crude towers, side s
 
 | Case | Status | DWSIM | Contributor |
 |---|---|---|---|
+| [atmospheric-crude-tower-steam-stripping](atmospheric-crude-tower-steam-stripping) | community | 10.2.12 (Patreon level 2) | @DanWBR |
 | [atmospheric-crude-tower-inside-out](atmospheric-crude-tower-inside-out) | community | 10.2.12 (Patreon level 2) | @DanWBR |
 | [straight-run-distillate-curves](straight-run-distillate-curves) | community | 10.2.12 | @DanWBR |
 | [straight-run-distillate-secondary-specs](straight-run-distillate-secondary-specs) | community | 10.2.12 | @DanWBR |

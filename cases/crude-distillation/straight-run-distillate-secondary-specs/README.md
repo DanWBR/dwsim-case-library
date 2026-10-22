@@ -2,13 +2,13 @@
 
 **Category:** crude-distillation
 **Status:** community
-**DWSIM version:** 10.2.12
+**DWSIM version:** 10.2.13
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
 ## Summary
 
-The column of `straight-run-distillate-curves`, now converged on product quality: the kerosene D86 95 % point is set to 274 C and the diesel D86 95 % point to 374 C. Each target is a secondary specification that moves one side draw rate. The column meets both in two outer iterations (six column solves).
+The column of `straight-run-distillate-curves`, now converged on product quality: the kerosene D86 95 % point is set to 259 C and the diesel D86 95 % point to 377 C. Each target is a secondary specification that moves one side draw rate. The column meets both in three outer iterations (seven column solves).
 
 ## Process description
 
@@ -21,8 +21,8 @@ Same feed and column as the companion case: 60 kg/s of straight-run distillate a
 | Item | Value | Unit | Notes |
 |---|---|---|---|
 | Distillate feed | 60 | kg/s | as in `straight-run-distillate-curves` |
-| Secondary specification 1 | kerosene D86 95 % = 274 C | | moves the kerosene draw rate, limits 50 to 150 % of the starting rate |
-| Secondary specification 2 | diesel D86 95 % = 374 C | | moves the diesel draw rate, limits 50 to 150 % of the starting rate |
+| Secondary specification 1 | kerosene D86 95 % = 259 C | | moves the kerosene draw rate, limits 50 to 150 % of the starting rate |
+| Secondary specification 2 | diesel D86 95 % = 377 C | | moves the diesel draw rate, limits 50 to 150 % of the starting rate |
 | Tolerance | 0.2 | K | on each D86 95 % point |
 
 ## Thermodynamics
@@ -32,7 +32,7 @@ Same feed and column as the companion case: 60 kg/s of straight-run distillate a
 ## Tuning and convergence notes
 
 - A secondary specification is set in the column editor (Specifications, Secondary): the product, the property (any distillation curve point such as `D86 95%`, a product property such as `Flash Point (Closed Cup)`, or a stream property ID), the target and the variable it moves (the condenser or reboiler specification value, or a side draw rate). Each variable can serve one specification.
-- The column solves inside an outer loop: Newton's method with a finite-difference Jacobian, updated by Broyden after each step. Here it took two iterations and six column solves in all.
+- The column solves inside an outer loop: Newton's method with a finite-difference Jacobian, updated by Broyden after each step. Here it took three iterations and seven column solves in all.
 - Choose a variable that drives the property. In this column the diesel is drawn from the feed stage, so its end point follows the feed's heavy end and moves little with the light gas oil rate; the diesel draw itself moves it. Pairs that act in opposite directions, or a target the column cannot reach, end with the closest solution found and a warning that names the specification.
 - A column specified with both product rates and fixed side draws has no free rate left: the distillate is set by the balance. Keep a ratio or a duty on one end when a secondary specification moves a rate.
 
@@ -40,16 +40,16 @@ Same feed and column as the companion case: 60 kg/s of straight-run distillate a
 
 | Quantity | Free draws (companion case) | With secondary specifications |
 |---|---|---|
-| Kerosene draw | 83.6 mol/s | 74.2 mol/s |
-| Diesel draw | 90.3 mol/s | 82.0 mol/s |
-| Naphtha | 16.0 kg/s, D86 95 % 186.4 C | 18.5 kg/s, D86 95 % 198.1 C |
-| Kerosene | 13.7 kg/s, D86 95 % 269.7 C | 12.7 kg/s, D86 95 % 273.9 C |
-| Diesel | 21.1 kg/s, D86 95 % 378.0 C | 19.5 kg/s, D86 95 % 374.1 C |
+| Kerosene draw | 83.5 mol/s | 72.4 mol/s |
+| Diesel draw | 90.3 mol/s | 84.2 mol/s |
+| Naphtha | 16.0 kg/s, D86 95 % 169.6 C | 18.4 kg/s, D86 95 % 176.4 C |
+| Kerosene | 13.7 kg/s, D86 95 % 255.1 C | 12.3 kg/s, D86 95 % 259.0 C |
+| Diesel | 21.1 kg/s, D86 95 % 381.0 C | 20.0 kg/s, D86 95 % 377.0 C |
 | Light gas oil | 9.2 kg/s | 9.3 kg/s |
-| Kerosene flash point | 50.5 C | 58.0 C |
-| Diesel calculated cetane index | 52.4 | 53.2 |
+| Kerosene flash point | 50.5 C | 57.4 C |
+| Diesel calculated cetane index | 52.4 | 53.1 |
 
-Smaller side draws push their light ends up the column: the naphtha grows and gets heavier, the kerosene loses its front end (its flash point rises by 7.5 C) and gains on its back end, and the diesel loses part of its heavy end to the light gas oil.
+Smaller side draws push their light ends up the column: the naphtha grows and gets heavier, the kerosene loses its front end (its flash point rises by 6.9 C) and gains on its back end, and the diesel loses part of its heavy end to the light gas oil.
 
 ## Files
 

@@ -2,7 +2,7 @@
 
 **Category:** crude-distillation
 **Status:** community
-**DWSIM version:** 10.2.12
+**DWSIM version:** 10.2.13
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
@@ -31,7 +31,7 @@ The Distillation Curves utility of the kerosene, opened from the stream:
 | Column | 20 stages, 1.5 bar top, 0.5 bar pressure drop | | feed on stage 11 |
 | Condenser | reflux ratio 3 | | total condenser |
 | Reboiler | light gas oil rate | mol/s | the feed's molar flow above 360 C |
-| Side draws | kerosene 83.6, diesel 90.3 | mol/s | the feed's molar flow between 175 and 245 C and between 245 and 360 C |
+| Side draws | kerosene 83.5, diesel 90.3 | mol/s | the feed's molar flow between 175 and 245 C and between 245 and 360 C |
 
 ## Thermodynamics
 
@@ -45,16 +45,16 @@ The Distillation Curves utility of the kerosene, opened from the stream:
 - Solver: Wang-Henke (bubble point). The column's loop tolerances are 1e-3: at the defaults the converged column misses the post-solve mass balance check on the heaviest cut by about 0.1 %.
 - The diesel is drawn from the feed stage. With the feed one or two stages below the diesel draw, or the draws moved up, the column stopped converging in the tests behind this case.
 - A full atmospheric crude tower (residue included, feed at 330 to 360 C, flash zone vapour) failed to converge reliably with the current column solvers, which is why this case fractionates the distillate part of the crude. The reboiler stands in for the stripping steam of a real tower.
-- The distillation curves of a product come from its compounds: each pseudocomponent occupies its share of the product's standard liquid volume and boils at its own boiling point. Traces of light and heavy cuts in a side draw therefore show up at the ends of its TBP curve; the D86 curve, converted by API procedure 3A1.1, smooths them.
+- The distillation curves of a product come from its compounds: each pseudocomponent occupies its share of the product's standard liquid volume and boils at its own boiling point. A cut present only as a trace next to a much larger one is drawn toward the curve of the others, so the ends of the curve follow the bulk of the product. The D86 curve comes from API procedure 3A1.1 up to 95 %; its final boiling point is extrapolated from the 90 to 95 % slope.
 
 ## Results
 
 | Product | Flow (kg/s) | D86 10 % | D86 50 % | D86 95 % | D86 FBP | Flash point | Density at 15 C | Cetane index (D4737) |
 |---|---|---|---|---|---|---|---|---|
-| Naphtha | 16.0 | 76.7 C | 113.0 C | 186.4 C | 229.7 C | | 748.8 kg/m3 | |
-| Kerosene | 13.7 | 176.4 C | 205.4 C | 269.7 C | 300.0 C | 50.5 C | 807.2 kg/m3 | |
-| Diesel | 21.1 | 247.8 C | 296.0 C | 378.0 C | 388.3 C | 99.8 C | 855.9 kg/m3 | 52.4 |
-| Light gas oil | 9.2 | 340.3 C | 362.4 C | 394.0 C | 399.1 C | 163.6 C | 890.3 kg/m3 | |
+| Naphtha | 16.0 | 76.7 C | 113.0 C | 169.6 C | 178.9 C | | 748.8 kg/m3 | |
+| Kerosene | 13.7 | 176.4 C | 205.4 C | 255.1 C | 263.6 C | 50.5 C | 807.2 kg/m3 | |
+| Diesel | 21.1 | 247.8 C | 296.0 C | 381.0 C | 394.6 C | 99.8 C | 855.9 kg/m3 | 52.4 |
+| Light gas oil | 9.2 | 339.8 C | 360.7 C | 394.0 C | 398.9 C | 163.3 C | 890.3 kg/m3 | |
 
 Pool check:
 
@@ -62,11 +62,11 @@ Pool check:
 |---|---|---|---|---|
 | Kerosene | flash point (closed cup) | 50.5 C | at least 38 C (Jet A-1) | meets |
 | Kerosene | D86 10 % | 176.4 C | at most 205 C | meets |
-| Kerosene | D86 final boiling point | 300.0 C | at most 300 C | at the limit |
+| Kerosene | D86 final boiling point | 263.6 C | at most 300 C | meets |
 | Kerosene | density at 15 C | 807.2 kg/m3 | 775 to 840 kg/m3 | meets |
 | Kerosene | freezing point (API 2B11.1) | -44.7 C | at most -47 C | misses |
 | Diesel | flash point | 99.8 C | above 55 C (EN 590) | meets |
-| Diesel | D86 95 % | 378.0 C | at most 360 C | misses |
+| Diesel | D86 95 % | 381.0 C | at most 360 C | misses |
 | Diesel | density at 15 C | 855.9 kg/m3 | 820 to 845 kg/m3 | misses |
 | Diesel | calculated cetane index | 52.4 | at least 46 | meets |
 

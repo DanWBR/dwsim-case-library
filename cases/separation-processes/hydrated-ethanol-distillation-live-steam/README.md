@@ -64,7 +64,7 @@ All pressures are absolute. The basis is the one Zanarotti (2025) took from a re
 
 - A distillation column with **21 + 7 equilibrium stages**, on Wang-Henke (bubble point).
 - The specification pair is the reflux ratio plus the bottoms flow, which is the pair that method is built for. The bottoms flow is whatever is left after taking the hydrated ethanol off at 93.0 % m/m.
-- The reflux ratio is searched in steps from 5.0, which converges, until the reboiler idles. Wang-Henke starts each solve from the column's last profile, and a jump in reflux can land outside what it converges from. On a failure the search goes back to the last good point and halves the step.
+- The reflux ratio is searched in steps from 5.0, which converges, until the reboiler idles. Each solve starts from the column's initial estimates, not from its last profile, and some reflux ratios do not converge from them: 4.6, tried straight after 5.0, did not. On a failure the search goes back to the last good point and halves the step.
 
 **Why fewer stages.** The reference counts B's 42 trays as equilibrium stages and needs a reflux of 3.9, while the plant runs at 5 to 7. With half the trays as equilibrium stages, the reflux the live steam sustains is 5.2, in the plant's range.
 

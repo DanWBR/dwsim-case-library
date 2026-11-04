@@ -149,6 +149,10 @@
    "preview": "cases/reaction-systems/ammonia-synthesis-single-pass/ammonia-synthesis-single-pass.png"
   },
   {
+   "path": "cases/reaction-systems/cumene-by-benzene-alkylation/cumene-by-benzene-alkylation.dwxmz",
+   "preview": "cases/reaction-systems/cumene-by-benzene-alkylation/cumene-by-benzene-alkylation.png"
+  },
+  {
    "path": "cases/reaction-systems/lohc-hydrogen-release-from-methylcyclohexane/lohc-hydrogen-release-from-methylcyclohexane.dwxmz",
    "preview": "cases/reaction-systems/lohc-hydrogen-release-from-methylcyclohexane/lohc-hydrogen-release-from-methylcyclohexane.png"
   },

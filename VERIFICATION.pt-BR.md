@@ -12,7 +12,7 @@ Publicado como enviado. Completo e passando no checklist de confidencialidade, m
 
 Reproduzido por um mantenedor ou por um segundo contribuidor. Para promover um caso a verificado, alguém diferente do autor original confirma:
 
-1. O fluxograma anexado abre na versão do DWSIM indicada.
+1. O fluxograma anexado abre na versão do DWSIM indicada (no Patreon Edition, para um caso que precisa dele).
 2. Ele resolve sem erros.
 3. Os resultados principais do texto batem com o que o fluxograma produz, dentro de uma tolerância razoável.
 

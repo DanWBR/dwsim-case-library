@@ -12,7 +12,7 @@ Published as submitted. Complete and passing the confidentiality checklist, but 
 
 Reproduced by a maintainer or a second contributor. To promote a case to verified, someone other than the original author confirms:
 
-1. The attached flowsheet opens in the stated DWSIM version.
+1. The attached flowsheet opens in the stated DWSIM version (in the Patreon Edition, for a case that needs it).
 2. It solves without errors.
 3. The key results in the write-up match what the flowsheet produces, within a reasonable tolerance.
 

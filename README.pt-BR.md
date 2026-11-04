@@ -12,6 +12,7 @@ O objetivo é simples: encurtar a curva de aprendizado de novos usuários e most
 - As escolhas de pacote termodinâmico e o raciocínio por trás delas.
 - Notas práticas de ajuste e convergência (estimativas iniciais, parâmetros do solver, o que observar).
 - Opcional: o arquivo de fluxograma do DWSIM (`.dwxmz`).
+- Casos que precisam do DWSIM Patreon Edition (a Pipe Network, os pacotes de eletrólitos, CCUS ou líquidos iônicos, o Operator Training e os demais componentes Patreon). O DWSIM de código aberto os marca na aba Case Library, para que seus usuários saibam que o caso não abre ali. Veja [Casos que usam o DWSIM Patreon Edition](CONTRIBUTING.pt-BR.md#casos-que-usam-o-dwsim-patreon-edition).
 - Opcional: uma comparação dos resultados do DWSIM com dados de planta ou de outro simulador, **somente quando você tem permissão para publicar essa comparação** (veja [Confidencialidade e licenciamento](#confidencialidade-e-licenciamento)).
 
 ## O que não entra aqui

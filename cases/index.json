@@ -15,7 +15,14 @@
   },
   {
    "path": "cases/carbon-capture/ionic-liquid-precombustion-capture/ionic-liquid-precombustion-capture.dwxmz",
-   "preview": "cases/carbon-capture/ionic-liquid-precombustion-capture/ionic-liquid-precombustion-capture.png"
+   "preview": "cases/carbon-capture/ionic-liquid-precombustion-capture/ionic-liquid-precombustion-capture.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Ionic Liquids property package",
+     "assembly": "DWSIM.Extensions.PropertyPackages.IonicLiquids"
+    }
+   ]
   },
   {
    "path": "cases/clean-energy/e-methanol-from-fermentation-co2/e-methanol-from-fermentation-co2.dwxmz",
@@ -59,7 +66,14 @@
   },
   {
    "path": "cases/fluid-flow-and-piping/fire-water-ring-network/fire-water-ring-network.dwxmz",
-   "preview": "cases/fluid-flow-and-piping/fire-water-ring-network/fire-water-ring-network.png"
+   "preview": "cases/fluid-flow-and-piping/fire-water-ring-network/fire-water-ring-network.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Pipe Network",
+     "assembly": "DWSIM.UnitOperations.PipeNetwork"
+    }
+   ]
   },
   {
    "path": "cases/fluid-flow-and-piping/pump-variable-frequency-drive/pump-variable-frequency-drive.dwxmz",
@@ -99,15 +113,36 @@
   },
   {
    "path": "cases/operator-training/compressor-aftercooler-ots/compressor-aftercooler-ots.dwxmz",
-   "preview": "cases/operator-training/compressor-aftercooler-ots/compressor-aftercooler-ots.png"
+   "preview": "cases/operator-training/compressor-aftercooler-ots/compressor-aftercooler-ots.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Operator Training",
+     "assembly": "DWSIM.Extensions.OperatorTraining"
+    }
+   ]
   },
   {
    "path": "cases/operator-training/gas-liquid-separator-ots/gas-liquid-separator-ots.dwxmz",
-   "preview": "cases/operator-training/gas-liquid-separator-ots/gas-liquid-separator-ots.png"
+   "preview": "cases/operator-training/gas-liquid-separator-ots/gas-liquid-separator-ots.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Operator Training",
+     "assembly": "DWSIM.Extensions.OperatorTraining"
+    }
+   ]
   },
   {
    "path": "cases/operator-training/two-stage-separation-ots/two-stage-separation-ots.dwxmz",
-   "preview": "cases/operator-training/two-stage-separation-ots/two-stage-separation-ots.png"
+   "preview": "cases/operator-training/two-stage-separation-ots/two-stage-separation-ots.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Operator Training",
+     "assembly": "DWSIM.Extensions.OperatorTraining"
+    }
+   ]
   },
   {
    "path": "cases/reaction-systems/ammonia-synthesis-single-pass/ammonia-synthesis-single-pass.dwxmz",

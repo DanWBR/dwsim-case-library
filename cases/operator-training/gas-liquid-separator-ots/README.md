@@ -3,6 +3,7 @@
 **Category:** operator-training
 **Status:** community
 **DWSIM version:** 10.2.9
+**DWSIM edition:** Patreon Edition (Operator Training)
 **Language:** English
 **Contributor:** Daniel Medeiros
 

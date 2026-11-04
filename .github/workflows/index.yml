@@ -8,6 +8,7 @@ on:
       - 'cases/**'
       - '!cases/index.json'
       - '.github/scripts/build_index.py'
+      - '.github/scripts/patreon_components.json'
       - '.github/workflows/index.yml'
   workflow_dispatch:
 

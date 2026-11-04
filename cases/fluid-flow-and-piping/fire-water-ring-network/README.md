@@ -3,6 +3,7 @@
 **Category:** fluid-flow-and-piping
 **Status:** community
 **DWSIM version:** 10.2.9 or later
+**DWSIM edition:** Patreon Edition (Pipe Network)
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 

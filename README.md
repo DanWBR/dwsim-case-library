@@ -12,6 +12,7 @@ The goal is simple: shorten the learning curve for new users and show what DWSIM
 - Thermodynamic package choices and the reasoning behind them.
 - Practical tuning and convergence notes (initial estimates, solver settings, what to watch out for).
 - Optional: the DWSIM flowsheet file (`.dwxmz`).
+- Cases that need the DWSIM Patreon Edition (the Pipe Network, the electrolyte, CCUS or ionic liquid property packages, Operator Training and the other Patreon components). The open-source DWSIM marks them in its Case Library tab, so its users know the case will not open there. See [Cases that use the DWSIM Patreon Edition](CONTRIBUTING.md#cases-that-use-the-dwsim-patreon-edition).
 - Optional: a comparison of DWSIM results against plant data or another simulator, **only when you are allowed to publish that comparison** (see [Confidentiality and licensing](#confidentiality-and-licensing)).
 
 ## What does not belong here

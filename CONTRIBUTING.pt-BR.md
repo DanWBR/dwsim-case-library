@@ -26,6 +26,12 @@ Na dúvida, compartilhe a forma do problema em vez dos números brutos: vazões 
 
 Um caso curto e bem documentado vale mais que um grande e sem explicação.
 
+## Casos que usam o DWSIM Patreon Edition
+
+Casos que usam componentes do DWSIM Patreon Edition são bem-vindos: a Pipe Network, os pacotes de eletrólitos, CCUS, líquidos iônicos e asfaltenos, o Operator Training, as operações unitárias Patreon e afins. O DWSIM de código aberto não tem esses componentes, então um caso assim não abre nele.
+
+Você não precisa marcar o caso. O índice de casos lê cada fluxograma e lista os componentes do Patreon Edition que ele usa, e o DWSIM de código aberto mostra o caso na aba Case Library como precisando do Patreon Edition, com os componentes nomeados. Diga isso também no texto, no campo **Edição do DWSIM**, para que quem lê no GitHub saiba antes de baixar.
+
 ## Dois jeitos de enviar
 
 ### Formulário web (sem git)

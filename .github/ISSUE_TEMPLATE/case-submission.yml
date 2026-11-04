@@ -65,6 +65,17 @@ body:
       required: true
 
   - type: dropdown
+    id: dwsim-edition
+    attributes:
+      label: DWSIM edition
+      description: Cases that need components of the DWSIM Patreon Edition are welcome; the open-source DWSIM marks them as needing it.
+      options:
+        - Open source (runs in any DWSIM)
+        - Patreon Edition (name the components in the description)
+    validations:
+      required: true
+
+  - type: dropdown
     id: language
     attributes:
       label: Language

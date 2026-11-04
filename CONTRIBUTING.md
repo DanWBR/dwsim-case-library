@@ -26,6 +26,12 @@ When in doubt, share the shape of the problem instead of raw numbers: normalized
 
 A short, well-documented case beats a large, unexplained one.
 
+## Cases that use the DWSIM Patreon Edition
+
+Cases that use components of the DWSIM Patreon Edition are welcome: the Pipe Network, the electrolyte, CCUS, ionic liquid and asphaltene property packages, Operator Training, the Patreon unit operations and the like. The open-source DWSIM does not have these components, so such a case does not open there.
+
+You do not have to mark it yourself. The case index reads each flowsheet and lists the Patreon Edition components it uses, and the open-source DWSIM shows the case in its Case Library tab as needing the Patreon Edition, naming the components. Say it in the write-up too, in the **DWSIM edition** field, so readers on GitHub know before they download.
+
 ## Two ways to submit
 
 ### Web form (no git)

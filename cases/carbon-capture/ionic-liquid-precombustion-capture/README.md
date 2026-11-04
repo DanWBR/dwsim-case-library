@@ -3,6 +3,7 @@
 **Category:** carbon-capture
 **Status:** community
 **DWSIM version:** 10.2.11 or later
+**DWSIM edition:** Patreon Edition (Ionic Liquids property package)
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 

@@ -1,0 +1,181 @@
+{
+ "version": 1,
+ "cases": [
+  {
+   "path": "cases/bioprocesses/biogas-to-grid/biogas-to-grid.dwxmz",
+   "preview": "cases/bioprocesses/biogas-to-grid/biogas-to-grid.png"
+  },
+  {
+   "path": "cases/bioprocesses/cellulosic-ethanol-from-corn-stover/cellulosic-ethanol-from-corn-stover.dwxmz",
+   "preview": "cases/bioprocesses/cellulosic-ethanol-from-corn-stover/cellulosic-ethanol-from-corn-stover.png"
+  },
+  {
+   "path": "cases/carbon-capture/beccs-fermentation-co2-dense-phase-pipeline/beccs-fermentation-co2-dense-phase-pipeline.dwxmz",
+   "preview": "cases/carbon-capture/beccs-fermentation-co2-dense-phase-pipeline/beccs-fermentation-co2-dense-phase-pipeline.png"
+  },
+  {
+   "path": "cases/carbon-capture/ionic-liquid-precombustion-capture/ionic-liquid-precombustion-capture.dwxmz",
+   "preview": "cases/carbon-capture/ionic-liquid-precombustion-capture/ionic-liquid-precombustion-capture.png"
+  },
+  {
+   "path": "cases/clean-energy/e-methanol-from-fermentation-co2/e-methanol-from-fermentation-co2.dwxmz",
+   "preview": "cases/clean-energy/e-methanol-from-fermentation-co2/e-methanol-from-fermentation-co2.png"
+  },
+  {
+   "path": "cases/clean-energy/green-hydrogen-solar-electrolysis/green-hydrogen-solar-electrolysis.dwxmz",
+   "preview": "cases/clean-energy/green-hydrogen-solar-electrolysis/green-hydrogen-solar-electrolysis.png"
+  },
+  {
+   "path": "cases/clean-energy/hydroelectric-heat-recovery/hydroelectric-heat-recovery.dwxmz",
+   "preview": "cases/clean-energy/hydroelectric-heat-recovery/hydroelectric-heat-recovery.png"
+  },
+  {
+   "path": "cases/clean-energy/mars-isru-propellant-plant/mars-isru-propellant-plant.dwxmz",
+   "preview": "cases/clean-energy/mars-isru-propellant-plant/mars-isru-propellant-plant.png"
+  },
+  {
+   "path": "cases/crude-distillation/atmospheric-crude-tower-inside-out/atmospheric-crude-tower-inside-out.dwxmz",
+   "preview": "cases/crude-distillation/atmospheric-crude-tower-inside-out/atmospheric-crude-tower-inside-out.png"
+  },
+  {
+   "path": "cases/crude-distillation/atmospheric-crude-tower-steam-stripping/atmospheric-crude-tower-steam-stripping.dwxmz",
+   "preview": "cases/crude-distillation/atmospheric-crude-tower-steam-stripping/atmospheric-crude-tower-steam-stripping.png"
+  },
+  {
+   "path": "cases/crude-distillation/straight-run-distillate-curves/straight-run-distillate-curves.dwxmz",
+   "preview": "cases/crude-distillation/straight-run-distillate-curves/straight-run-distillate-curves.png"
+  },
+  {
+   "path": "cases/crude-distillation/straight-run-distillate-secondary-specs/straight-run-distillate-secondary-specs.dwxmz",
+   "preview": "cases/crude-distillation/straight-run-distillate-secondary-specs/straight-run-distillate-secondary-specs.png"
+  },
+  {
+   "path": "cases/electrolytes-and-aqueous/multi-effect-distillation-seawater-desalination/multi-effect-distillation-seawater-desalination.dwxmz",
+   "preview": "cases/electrolytes-and-aqueous/multi-effect-distillation-seawater-desalination/multi-effect-distillation-seawater-desalination.png"
+  },
+  {
+   "path": "cases/fluid-flow-and-piping/dosing-pump-flow-control-dynamics/dosing-pump-flow-control-dynamics.dwxmz",
+   "preview": "cases/fluid-flow-and-piping/dosing-pump-flow-control-dynamics/dosing-pump-flow-control-dynamics.png"
+  },
+  {
+   "path": "cases/fluid-flow-and-piping/fire-water-ring-network/fire-water-ring-network.dwxmz",
+   "preview": "cases/fluid-flow-and-piping/fire-water-ring-network/fire-water-ring-network.png"
+  },
+  {
+   "path": "cases/fluid-flow-and-piping/pump-variable-frequency-drive/pump-variable-frequency-drive.dwxmz",
+   "preview": "cases/fluid-flow-and-piping/pump-variable-frequency-drive/pump-variable-frequency-drive.png"
+  },
+  {
+   "path": "cases/gas-processing/compressor-performance-map/compressor-performance-map.dwxmz",
+   "preview": "cases/gas-processing/compressor-performance-map/compressor-performance-map.png"
+  },
+  {
+   "path": "cases/gas-processing/natural-gas-dew-point-control/natural-gas-dew-point-control.dwxmz",
+   "preview": "cases/gas-processing/natural-gas-dew-point-control/natural-gas-dew-point-control.png"
+  },
+  {
+   "path": "cases/gas-processing/turboexpander-performance-map/turboexpander-performance-map.dwxmz",
+   "preview": "cases/gas-processing/turboexpander-performance-map/turboexpander-performance-map.png"
+  },
+  {
+   "path": "cases/heat-integration-utilities/propane-refrigeration-cycle/propane-refrigeration-cycle.dwxmz",
+   "preview": "cases/heat-integration-utilities/propane-refrigeration-cycle/propane-refrigeration-cycle.png"
+  },
+  {
+   "path": "cases/heat-integration-utilities/r410a-water-cooled-chiller/r410a-water-cooled-chiller.dwxmz",
+   "preview": "cases/heat-integration-utilities/r410a-water-cooled-chiller/r410a-water-cooled-chiller.png"
+  },
+  {
+   "path": "cases/heat-integration-utilities/sco2-recompression-brayton-cycle/sco2-recompression-brayton-cycle.dwxmz",
+   "preview": "cases/heat-integration-utilities/sco2-recompression-brayton-cycle/sco2-recompression-brayton-cycle.png"
+  },
+  {
+   "path": "cases/heat-integration-utilities/sugar-mill-back-pressure-cogeneration/sugar-mill-back-pressure-cogeneration.dwxmz",
+   "preview": "cases/heat-integration-utilities/sugar-mill-back-pressure-cogeneration/sugar-mill-back-pressure-cogeneration.png"
+  },
+  {
+   "path": "cases/hydrotreating/sustainable-aviation-fuel-hefa-from-jatropha-oil/sustainable-aviation-fuel-hefa-from-jatropha-oil.dwxmz",
+   "preview": "cases/hydrotreating/sustainable-aviation-fuel-hefa-from-jatropha-oil/sustainable-aviation-fuel-hefa-from-jatropha-oil.png"
+  },
+  {
+   "path": "cases/operator-training/compressor-aftercooler-ots/compressor-aftercooler-ots.dwxmz",
+   "preview": "cases/operator-training/compressor-aftercooler-ots/compressor-aftercooler-ots.png"
+  },
+  {
+   "path": "cases/operator-training/gas-liquid-separator-ots/gas-liquid-separator-ots.dwxmz",
+   "preview": "cases/operator-training/gas-liquid-separator-ots/gas-liquid-separator-ots.png"
+  },
+  {
+   "path": "cases/operator-training/two-stage-separation-ots/two-stage-separation-ots.dwxmz",
+   "preview": "cases/operator-training/two-stage-separation-ots/two-stage-separation-ots.png"
+  },
+  {
+   "path": "cases/reaction-systems/ammonia-synthesis-single-pass/ammonia-synthesis-single-pass.dwxmz",
+   "preview": "cases/reaction-systems/ammonia-synthesis-single-pass/ammonia-synthesis-single-pass.png"
+  },
+  {
+   "path": "cases/reaction-systems/lohc-hydrogen-release-from-methylcyclohexane/lohc-hydrogen-release-from-methylcyclohexane.dwxmz",
+   "preview": "cases/reaction-systems/lohc-hydrogen-release-from-methylcyclohexane/lohc-hydrogen-release-from-methylcyclohexane.png"
+  },
+  {
+   "path": "cases/reaction-systems/methanol-synthesis-syngas/methanol-synthesis-syngas.dwxmz",
+   "preview": "cases/reaction-systems/methanol-synthesis-syngas/methanol-synthesis-syngas.png"
+  },
+  {
+   "path": "cases/reaction-systems/steam-methane-reforming-h2/steam-methane-reforming-h2.dwxmz",
+   "preview": "cases/reaction-systems/steam-methane-reforming-h2/steam-methane-reforming-h2.png"
+  },
+  {
+   "path": "cases/reaction-systems/styrene-polymerization/styrene-polymerization.dwxmz",
+   "preview": "cases/reaction-systems/styrene-polymerization/styrene-polymerization.png"
+  },
+  {
+   "path": "cases/separation-processes/benzene-toluene-column-dynamics/benzene-toluene-column-dynamics.dwxmz",
+   "preview": "cases/separation-processes/benzene-toluene-column-dynamics/benzene-toluene-column-dynamics.png"
+  },
+  {
+   "path": "cases/separation-processes/benzene-toluene-column-shutdown/benzene-toluene-column-shutdown.dwxmz",
+   "preview": "cases/separation-processes/benzene-toluene-column-shutdown/benzene-toluene-column-shutdown.png"
+  },
+  {
+   "path": "cases/separation-processes/benzene-toluene-column-startup/benzene-toluene-column-startup.dwxmz",
+   "preview": "cases/separation-processes/benzene-toluene-column-startup/benzene-toluene-column-startup.png"
+  },
+  {
+   "path": "cases/separation-processes/benzene-toluene-distillation/benzene-toluene-distillation.dwxmz",
+   "preview": "cases/separation-processes/benzene-toluene-distillation/benzene-toluene-distillation.png"
+  },
+  {
+   "path": "cases/separation-processes/cachaca-pot-still-batch-distillation/cachaca-pot-still-batch-distillation.dwxmz",
+   "preview": "cases/separation-processes/cachaca-pot-still-batch-distillation/cachaca-pot-still-batch-distillation.png"
+  },
+  {
+   "path": "cases/separation-processes/copolymer-devolatilization/copolymer-devolatilization.dwxmz",
+   "preview": "cases/separation-processes/copolymer-devolatilization/copolymer-devolatilization.png"
+  },
+  {
+   "path": "cases/separation-processes/ethanol-distillery/ethanol-distillery.dwxmz",
+   "preview": "cases/separation-processes/ethanol-distillery/ethanol-distillery.png"
+  },
+  {
+   "path": "cases/separation-processes/hydrated-ethanol-distillation-live-steam/hydrated-ethanol-distillation-live-steam.dwxmz",
+   "preview": "cases/separation-processes/hydrated-ethanol-distillation-live-steam/hydrated-ethanol-distillation-live-steam.png"
+  },
+  {
+   "path": "cases/separation-processes/orange-oil-deterpenation-supercritical-co2/orange-oil-deterpenation-supercritical-co2.dwxmz",
+   "preview": "cases/separation-processes/orange-oil-deterpenation-supercritical-co2/orange-oil-deterpenation-supercritical-co2.png"
+  },
+  {
+   "path": "cases/separation-processes/peg-dewatering/peg-dewatering.dwxmz",
+   "preview": "cases/separation-processes/peg-dewatering/peg-dewatering.png"
+  },
+  {
+   "path": "cases/separation-processes/polymer-cloud-point/polymer-cloud-point.dwxmz",
+   "preview": "cases/separation-processes/polymer-cloud-point/polymer-cloud-point.png"
+  },
+  {
+   "path": "cases/separation-processes/polymer-devolatilization/polymer-devolatilization.dwxmz",
+   "preview": "cases/separation-processes/polymer-devolatilization/polymer-devolatilization.png"
+  }
+ ]
+}

@@ -25,6 +25,17 @@
    ]
   },
   {
+   "path": "cases/carbon-capture/post-combustion-co2-capture-mea/post-combustion-co2-capture-mea.dwxmz",
+   "preview": "cases/carbon-capture/post-combustion-co2-capture-mea/post-combustion-co2-capture-mea.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "CCUS property packages",
+     "assembly": "DWSIM.Extensions.PropertyPackages.CCUS"
+    }
+   ]
+  },
+  {
    "path": "cases/clean-energy/e-methanol-from-fermentation-co2/e-methanol-from-fermentation-co2.dwxmz",
    "preview": "cases/clean-energy/e-methanol-from-fermentation-co2/e-methanol-from-fermentation-co2.png"
   },

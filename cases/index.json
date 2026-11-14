@@ -191,6 +191,10 @@
    "preview": "cases/reaction-systems/methanol-synthesis-syngas/methanol-synthesis-syngas.png"
   },
   {
+   "path": "cases/reaction-systems/paracetamol-acetylation-evaporative-crystallization/paracetamol-acetylation-evaporative-crystallization.dwxmz",
+   "preview": "cases/reaction-systems/paracetamol-acetylation-evaporative-crystallization/paracetamol-acetylation-evaporative-crystallization.png"
+  },
+  {
    "path": "cases/reaction-systems/steam-methane-reforming-h2/steam-methane-reforming-h2.dwxmz",
    "preview": "cases/reaction-systems/steam-methane-reforming-h2/steam-methane-reforming-h2.png"
   },

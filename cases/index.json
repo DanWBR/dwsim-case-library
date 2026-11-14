@@ -87,6 +87,17 @@
    ]
   },
   {
+   "path": "cases/fluid-flow-and-piping/oil-field-reservoir-to-plant/oil-field-reservoir-to-plant.dwxmz",
+   "preview": "cases/fluid-flow-and-piping/oil-field-reservoir-to-plant/oil-field-reservoir-to-plant.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Pipe Network",
+     "assembly": "DWSIM.UnitOperations.PipeNetwork"
+    }
+   ]
+  },
+  {
    "path": "cases/fluid-flow-and-piping/pump-variable-frequency-drive/pump-variable-frequency-drive.dwxmz",
    "preview": "cases/fluid-flow-and-piping/pump-variable-frequency-drive/pump-variable-frequency-drive.png"
   },

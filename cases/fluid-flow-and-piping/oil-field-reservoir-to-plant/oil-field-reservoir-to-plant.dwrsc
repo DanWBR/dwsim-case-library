@@ -1,0 +1,44 @@
+{
+  "DeckPath": "~/dwsim-opm/examples/oil-field/OILFIELD.DATA",
+  "OutputDirectory": "",
+  "PythonEnvironment": "~/dwsim-opm/venv",
+  "NetworkTag": "NET",
+  "WellSources": { "P1": "WH-P1", "P2": "WH-P2", "P3": "WH-P3" },
+  "OilStream": "stock-tank-oil",
+  "GasStream": "separator-gas",
+  "WaterCompound": "Water",
+  "OilDensity": 735.3,
+  "Relaxation": 0.5,
+  "MaximumThpStep": 100,
+  "SurfaceReuseTolerance": 0,
+  "SolverTimeout": 300,
+  "Steps": 0,
+  "ReservoirOnly": false,
+  "Rules": [
+    { "Kind": "gasinj", "Source": "gas", "SourceObject": "injection-gas", "Target": "GINJ", "Factor": 1.0 },
+    { "Kind": "watinj", "Source": "water", "SourceObject": "injection-water", "Target": "WINJ", "Factor": 1.0 },
+    { "Kind": "limit-liquid", "Source": "const", "Value": 20000, "Target": "PROD" }
+  ],
+  "Vfp": {
+    "TableNumber": 1,
+    "DatumDepth": 8400,
+    "TubingLength": 2560,
+    "TubingRise": 2560,
+    "TubingDiameter": 0.127,
+    "BottomholeTemperature": 366.15,
+    "OilRates": "500, 1500, 3000, 5000, 8000, 12000",
+    "TubingHeadPressures": "200, 400, 800, 1500",
+    "WaterCuts": "0, 0.3, 0.6, 0.9",
+    "GasOilRatios": "0.8, 1.5, 3",
+    "LiftGasRates": "0"
+  },
+  "Pvt": {
+    "Temperature": 366.15,
+    "GasOilRatios": "0.001, 0.09, 0.18, 0.37, 0.64, 0.78, 0.93, 1.27, 1.62",
+    "GasPressures": "14.7, 264.7, 514.7, 1014.7, 2014.7, 2514.7, 3014.7, 4014.7, 5014.7, 9014.7",
+    "MaximumPressure": 9014.7,
+    "WaterReferencePressure": 4014.7,
+    "EosLiquidDensity": true,
+    "CalibrateVolumeShift": true
+  }
+}

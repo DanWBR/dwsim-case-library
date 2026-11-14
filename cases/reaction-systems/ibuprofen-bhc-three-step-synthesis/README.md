@@ -62,7 +62,7 @@ The BHC (Boots-Hoechst-Celanese) process makes ibuprofen from isobutylbenzene in
 - **Peng-Robinson for the reaction section, not UNIFAC:** hydrogen and carbon monoxide don't have UNIFAC groups, and the package stops on them.
 - **The solids separator has the liquid on outlet 1 and the solids on outlet 2.**
 - **The dryer is a heater with a pressure drop of 1.4 bar,** followed by a flash drum.
-- **Limit of the fitted pair:** the model follows the measurements to within about 8 % in mole fraction up to 26 °C. At the last point (28.9 °C, x = 0.05) the solid-liquid flash doesn't converge, and above about 30 °C the fitted NRTL curve rises faster than the data. The crystallizer works at 5 °C, inside the fitted range; the dissolution at 60 °C is above it, so the amount of n-heptane the model needs to dissolve the crude isn't validated.
+- **Limit of the fitted pair:** the model follows the measurements to within about 8 % in mole fraction up to 26 °C. At the last point (28.9 °C, x = 0.05) it gives 0.062, 24 % above the measurement, and above about 30 °C the fitted NRTL curve rises faster than the data. The crystallizer works at 5 °C, inside the fitted range; the dissolution at 60 °C is above it, so the amount of n-heptane the model needs to dissolve the crude isn't validated.
 - **The unconverted reactants aren't recycled.** The 15 % of the isobutylbenzene that doesn't react leaves with the acetic acid in the distillate of T-101, and the ibuprofen in the mother liquor isn't recovered. A plant recycles both, so its yield is higher than the one of this flowsheet.
 
 ## Results
@@ -95,7 +95,7 @@ The solubility of ibuprofen in n-heptane from the model against the measurements
 | 290.56 | 0.0200 | 0.0187 | -6.7 % |
 | 295.56 | 0.0299 | 0.0275 | -8.1 % |
 | 299.21 | 0.0399 | 0.0394 | -1.3 % |
-| 302.07 | 0.0500 | flash doesn't converge | |
+| 302.07 | 0.0500 | 0.0622 | +24.4 % |
 
 The case doesn't have a reference from a plant or from another simulator. The comparison above is the only one against data.
 

@@ -48,18 +48,18 @@ Crude ibuprofen with 2 wt % of its linear isomer is purified by cooling crystall
 - **Fusion data of ibuprofen:** melting point 348.25 K and enthalpy of fusion 26.42 kJ/mol, from [1].
 - **The isomer:** its two pairs don't have data and are set as ideal pairs. It doesn't have fusion data either, so it stays in the liquid at any concentration.
 - **Estimated properties:** the boiling point, critical constants and ideal gas heat capacity of the two acids are Joback estimates. Ibuprofen decomposes before it boils, so its vapor-liquid constants are only placeholders for the models.
-- **Crystal density of ibuprofen:** 1100 kg/m3, rounded from the unit cell of a crystal structure [2]. The filter needs it for the volume of the slurry.
+- **Crystal density of ibuprofen:** 1110 kg/m3 [2]. The filter needs it for the volume of the slurry.
 
 ## Tuning and convergence notes
 
 - **The solvent rate is set on the composition of the hot solution:** Above about 30 °C the fitted NRTL curve rises much faster than the measurements, and a solution saturated at 30 °C can be anything from 5 to 17 mol % of ibuprofen in the model. A make-up tuned for a saturation temperature landed on the concentrated end, outside the range of the data. The make-up of each case was found by trial so that the hot solution has 9.63 kg of n-heptane per kg of ibuprofen, which is 4.8 mol % in the binary, saturated at 28 °C.
 - **The pairs of the isomer are ideal:** A first version gave the isomer the NRTL energies of ibuprofen against n-heptane, since the two are position isomers. The isomer that builds up in the loop then more than doubled the solubility of ibuprofen at 5 °C. There isn't a measurement to support either choice; the ideal pairs are the neutral one, and the result of the case depends on it.
 - **Automatic estimation of NRTL pairs is switched off** (`AutoEstimateMissingNRTLUNIQUACParameters`), and the two pairs without data are declared with zero energies, because the package refuses to calculate with a pair it doesn't have.
-- **The recycle block uses Wegstein acceleration on every pass:** With plain substitution the tear stream converges slowly when the purge is small, and below 10 % of purge the block reached its iteration limit. `AccelerationMethod`, `WegsteinParameters.AccelFreq = 1` and `MaximumIterations = 300` were set from the script that built the case.
+- **The recycle block uses Wegstein acceleration on every pass:** With plain substitution the tear stream converges slowly when the purge is small, and below 10 % of purge the block reached its iteration limit. `AccelerationMethod`, `WegsteinParameters.AccelFreq = 1` and `MaximumIterations = 300` were set from the script that built the case. The study stops at 3 % of purge: at 2 % the loop converged in one build of the program and stalled in another, so a purge that small needs care.
 - **The tear stream needs a first estimate at the loop pressure:** left empty, it starts at 1.013 bar, the mixer takes the lowest pressure of its feeds, and the dryer ends below zero pressure.
 - **The Crystallizer has two outlets and the Filter takes one slurry,** so MIX-102 sits between them. The Crystals outlet is forced to the solid phase, which the log reports as a warning at each solve.
 - **The filter area is illustrative:** it comes from the default specific cake resistance and medium resistance of the block, for a cycle of 300 s with 30 % of the drum submerged.
-- **The loop isn't heat integrated:** the recycle returns at 5 °C and H-101 heats it again to 35 °C (124 kW), while CRY-101 removes 137 kW. An exchanger between the hot solution and the cold liquor would save most of both.
+- **Heat recovery is limited by the saturation temperature:** the recycle returns at 5 °C and H-101 heats it again to 35 °C (124 kW), while CRY-101 removes 137 kW. An exchanger between the hot solution and the cold recycle can only cool the solution to about 28 °C, because below 26.7 °C the ibuprofen crystallizes on the exchanger surface. That is about a quarter of the heating duty, and the flowsheet leaves it out.
 - **Mass balance:** feeds 1075.00 kg/h, product and purge 1075.05 kg/h.
 
 ## Results
@@ -99,7 +99,6 @@ The purge fraction against the yield and the purity. Each row has its own make-u
 | 7 | 412 | 0.85 | 98.1 | 0.34 | 1.96 |
 | 5 | 302 | 0.62 | 98.5 | 0.44 | 2.53 |
 | 3 | 191 | 0.39 | 99.0 | 0.61 | 3.55 |
-| 2 | 135 | 0.27 | 99.3 | 0.78 | 4.55 |
 
 ![Yield and purity against the purge](yield-and-purity-against-purge.png)
 
@@ -130,4 +129,4 @@ The flowsheet was put together for this example. The flows, the impurity level a
 ## References
 
 1. I. Hahnenkamp, G. Graubner, J. Gmehling, Measurement and prediction of solubilities of active pharmaceutical ingredients, Int. J. Pharm. 388 (2010) 73-81.
-2. Crystallography Open Database, entry 2104678 (ibuprofen). The unit cell (1272.03 Å3) gives 1.08 g/cm3 with four molecules per cell, a number of molecules assumed here.
+2. J. F. McConnell, Cryst. Struct. Commun. 3 (1974) 73-75. The unit cell of racemic ibuprofen (a = 14.667 Å, b = 7.886 Å, c = 10.730 Å, beta = 99.362°, four molecules) gives 1.12 g/cm3; helium pycnometry on the crystals gives 1.11 g/cm3, the value used here.

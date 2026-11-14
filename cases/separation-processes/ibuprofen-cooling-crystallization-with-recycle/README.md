@@ -55,7 +55,7 @@ Crude ibuprofen with 2 wt % of its linear isomer is purified by cooling crystall
 - **The solvent rate is set on the composition of the hot solution:** Above about 30 °C the fitted NRTL curve rises much faster than the measurements, and a solution saturated at 30 °C can be anything from 5 to 17 mol % of ibuprofen in the model. A make-up tuned for a saturation temperature landed on the concentrated end, outside the range of the data. The make-up of each case was found by trial so that the hot solution has 9.63 kg of n-heptane per kg of ibuprofen, which is 4.8 mol % in the binary, saturated at 28 °C.
 - **The pairs of the isomer are ideal:** A first version gave the isomer the NRTL energies of ibuprofen against n-heptane, since the two are position isomers. The isomer that builds up in the loop then more than doubled the solubility of ibuprofen at 5 °C. There isn't a measurement to support either choice; the ideal pairs are the neutral one, and the result of the case depends on it.
 - **Automatic estimation of NRTL pairs is switched off** (`AutoEstimateMissingNRTLUNIQUACParameters`), and the two pairs without data are declared with zero energies, because the package refuses to calculate with a pair it doesn't have.
-- **The recycle block uses Wegstein acceleration on every pass:** With plain substitution the tear stream converges slowly when the purge is small, and below 10 % of purge the block reached its iteration limit. `AccelerationMethod`, `WegsteinParameters.AccelFreq = 1` and `MaximumIterations = 300` were set from the script that built the case. The study stops at 3 % of purge: at 2 % the loop converged in one build of the program and stalled in another, so a purge that small needs care.
+- **The recycle block uses Wegstein acceleration on every pass:** With plain substitution the tear stream converges slowly when the purge is small, and below 10 % of purge the block reached its iteration limit. `AccelerationMethod`, `WegsteinParameters.AccelFreq = 1` and `MaximumIterations = 300` were set from the script that built the case.
 - **The tear stream needs a first estimate at the loop pressure:** left empty, it starts at 1.013 bar, the mixer takes the lowest pressure of its feeds, and the dryer ends below zero pressure.
 - **The Crystallizer has two outlets and the Filter takes one slurry,** so MIX-102 sits between them. The Crystals outlet is forced to the solid phase, which the log reports as a warning at each solve.
 - **The filter area is illustrative:** it comes from the default specific cake resistance and medium resistance of the block, for a cycle of 300 s with 30 % of the drum submerged.
@@ -99,6 +99,7 @@ The purge fraction against the yield and the purity. Each row has its own make-u
 | 7 | 412 | 0.85 | 98.1 | 0.34 | 1.96 |
 | 5 | 302 | 0.62 | 98.5 | 0.44 | 2.53 |
 | 3 | 191 | 0.39 | 99.0 | 0.61 | 3.55 |
+| 2 | 135 | 0.27 | 99.3 | 0.78 | 4.55 |
 
 ![Yield and purity against the purge](yield-and-purity-against-purge.png)
 

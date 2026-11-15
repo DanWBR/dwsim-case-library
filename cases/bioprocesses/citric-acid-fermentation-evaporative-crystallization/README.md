@@ -7,7 +7,7 @@
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
-> **Requirement:** The case needs DWSIM 10.2.17 or later, for the Crystallizer with the solubility from the property package and for the flash with solids in a mixture that has compounds without a vapor pressure correlation.
+> **Requirement:** The case needs DWSIM 10.2.17 or later, for the Crystallizer with the solubility from the property package, for the flash with solids in a mixture that has compounds without a vapor pressure correlation, and for the filter, the dryer and the separator with a stream without flow, which the study below needs.
 
 ## Summary
 
@@ -59,14 +59,14 @@ Citric acid is made by the aerobic fermentation of a sugar and recovered from th
 
 - **The fermentation parameters are assumptions:** the growth rate, the saturation constant and the two yields were chosen to give a broth with about 100 g/L of acid, in the range of an industrial fermentation. They don't come from a measured kinetics.
 - **The acid forms with the growth in this model:** the Bio Reactor ties the product to the growth of the biomass. An industrial fermentation of citric acid is fed-batch and makes most of the acid after the growth has stopped, under a limitation of nutrients. The steady-state reactor here stands for the average of that cycle.
-- **Continuous mode, and why:** in batch mode the block scales the feed to the reactor volume divided by the batch duration, so the volume has to match the flow times the cycle. In continuous mode the outlet is the feed transformed, and the mass balance of the flowsheet closes without that bookkeeping.
+- **Continuous mode:** the fermenter is a stirred vessel with a continuous feed, at the steady state of its 600 m3. In batch mode the block takes the batch duration as the reaction time and the feed as the charge of the cycles averaged over time.
 - **Where the nitrogen of the air goes:** the reactor sends the carbon dioxide and the oxygen left to its gas outlet and keeps the nitrogen with the broth, as a second phase. V-101 separates it.
-- **Why the broth is degassed:** the gases dissolved in the broth come out of solution when it is heated, and the Filter block doesn't take a feed with a vapor phase. Flashing a little water at 0.25 bar removes them before the crystallizer. With the heater at 60 °C, under the bubble point at that pressure, 0.01 kg/h of nitrogen stayed in the broth and that was enough to stop the filter.
+- **Why the broth is degassed:** the gases dissolved in the broth come out of solution when it is heated, and the Filter block only takes a trace of vapor in its feed (under 0.1 % of the mass). Flashing a little water at 0.25 bar removes them before the crystallizer.
 - **Evaporative crystallizer:** the block evaporates the fraction of the water it is given and reports the pressure of its vapor as the vapor pressure of pure water at 60 °C, 0.20 bar. The concentrated solution boils at a lower pressure than that; the rise of the boiling point isn't in the model.
 - **One evaporation stage:** the 9100 kg/h of water leave in the crystallizer, at 5880 kW. A plant concentrates the broth first in a multiple-effect evaporator and uses a fraction of that heat.
 - **What the purge is for:** the glucose that wasn't converted and what the centrifuge let through stay in the liquor. The purge keeps them from building up; it also takes 151 kg/h of acid.
 - **Product purity:** the liquor left in the cake dries onto the crystals, so the product ends with 0.11 wt % of glucose. A plant washes the cake, which the Filter block doesn't do.
-- **Smaller evaporation:** with 93 % of the water evaporated the flowsheet stopped at the filter with an error.
+- **Smaller evaporation:** with 93 % of the water evaporated or less, the first pass of the recycle doesn't reach saturation. The crystallizer doesn't form crystals, the filter sends everything to the mother liquor and the cake, the dryer and the product stay without flow until the recycle concentrates the solution. The flowsheet goes through those passes and converges.
 - **The recycle block uses Wegstein acceleration on every pass** (`AccelerationMethod`, `WegsteinParameters.AccelFreq = 1`, `MaximumIterations = 300`), set from the script that built the case, and the tear stream has a first estimate.
 - **Automatic estimation of NRTL pairs is switched off** (`AutoEstimateMissingNRTLUNIQUACParameters`), and the pairs without data are declared with zero energies.
 - **The filter area is illustrative:** it comes from the default cake and medium resistances of the block.
@@ -101,12 +101,15 @@ The fraction of the water evaporated in the crystallizer, with the same purge:
 
 | Water evaporated, % | Crystals in the slurry, wt % | Crystallized per pass, % | Product per kg of glucose, kg | Recycle, kg/h | Acid in the purge, kg/h | Crystallizer duty, kW |
 |---|---|---|---|---|---|---|
+| 85 | 5.2 | 6.9 | 0.24 | 5087 | 659 | 5786 |
+| 90 | 12.6 | 16.4 | 0.40 | 3208 | 415 | 5830 |
+| 93 | 20.6 | 26.2 | 0.49 | 2163 | 279 | 5855 |
 | 94 | 24.4 | 30.6 | 0.52 | 1827 | 235 | 5863 |
 | 95 | 29.2 | 36.1 | 0.55 | 1496 | 193 | 5870 |
 | 96 | 35.2 | 42.8 | 0.58 | 1171 | 151 | 5878 |
 | 97 | 43.3 | 51.3 | 0.60 | 851 | 109 | 5886 |
 
-Evaporating more leaves less liquor, so less acid goes to the purge and the recycle shrinks; the slurry gets denser. The base case stays at 96 %, with 35 wt % of crystals. The duty hardly changes, because nearly all the water is evaporated in every case.
+Evaporating more leaves less liquor, so less acid goes to the purge and the recycle shrinks; the slurry gets denser. At 85 % only 7 % of the acid that enters the crystallizer comes out as crystals in each pass, the recycle is four times that of the base case and the purge takes 659 kg/h of acid. The base case stays at 96 %, with 35 wt % of crystals. The duty hardly changes, because most of the water is evaporated in every case.
 
 ![Water evaporated](water-evaporated.png)
 

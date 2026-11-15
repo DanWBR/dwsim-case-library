@@ -175,6 +175,10 @@
    "preview": "cases/reaction-systems/ammonia-synthesis-single-pass/ammonia-synthesis-single-pass.png"
   },
   {
+   "path": "cases/reaction-systems/aspirin-acetylation-cooling-crystallization-acetic-acid-recovery/aspirin-acetylation-cooling-crystallization-acetic-acid-recovery.dwxmz",
+   "preview": "cases/reaction-systems/aspirin-acetylation-cooling-crystallization-acetic-acid-recovery/aspirin-acetylation-cooling-crystallization-acetic-acid-recovery.png"
+  },
+  {
    "path": "cases/reaction-systems/cumene-by-benzene-alkylation/cumene-by-benzene-alkylation.dwxmz",
    "preview": "cases/reaction-systems/cumene-by-benzene-alkylation/cumene-by-benzene-alkylation.png"
   },

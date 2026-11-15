@@ -15,5 +15,6 @@ Distillation, absorption, extraction, flash, and membranes.
 | [Soybean oil miscella distillation - the evaporators and the hexane stripper of a crushing plant](soybean-oil-miscella-distillation) | community | 10.2.13 | Nicolas Spogis (AI4Tech) |
 | [Cooling crystallization of ibuprofen from n-heptane, with mother liquor recycle](ibuprofen-cooling-crystallization-with-recycle) | community | 10.2.17+ | Daniel Medeiros |
 | [Antisolvent crystallization of ibuprofen from ethanol with water, and recovery of the ethanol](ibuprofen-antisolvent-crystallization-ethanol-recovery) | community | 10.2.17+ | Daniel Medeiros |
+| [Solvent swap of ibuprofen from ethanol to n-heptane, with cooling crystallization](ibuprofen-solvent-swap-ethanol-to-heptane) | community | 10.2.17+ | Daniel Medeiros |
 
 Add a case with the [case template](../../templates/CASE_TEMPLATE.md). See [CONTRIBUTING.md](../../CONTRIBUTING.md). Verified cases are listed first.

@@ -1,0 +1,811 @@
+{
+ "Version": 1,
+ "Name": "Good Oil Co. Well 7 gas condensate",
+ "Notes": "C. H. Whitson and M. R. Brule, Phase Behavior, SPE Monograph 20 (2000), Chapter 6, Tables 6.5, 6.10 and 6.12 (example report of Core Laboratories)",
+ "Temperature": 358.7055555555556,
+ "Composition": [
+  {
+   "Name": "CO2",
+   "Amount": 0.18,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "N2",
+   "Amount": 0.13,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "C1",
+   "Amount": 61.72,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "C2",
+   "Amount": 14.1,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "C3",
+   "Amount": 8.37,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "i-C4",
+   "Amount": 0.98,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "n-C4",
+   "Amount": 3.45,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "i-C5",
+   "Amount": 0.91,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "n-C5",
+   "Amount": 1.52,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  },
+  {
+   "Name": "C6",
+   "Amount": 1.79,
+   "MolarMass": 0.0,
+   "SpecificGravity": 0.0
+  }
+ ],
+ "HeavyEnd": {
+  "Name": "C7+",
+  "Amount": 6.85,
+  "MolarMass": 143.0,
+  "SpecificGravity": 0.795
+ },
+ "Characterization": {
+  "Equation": "PengRobinson",
+  "Shape": 1.0,
+  "Bound": 90.0,
+  "LastCarbonNumber": 30,
+  "Groups": 5,
+  "GroupLimits": [],
+  "Critical": "KeslerLee",
+  "VolumeShift": "MatchSpecificGravity",
+  "NonHydrocarbonInteractions": true,
+  "MethaneInteractionA": 0.18
+ },
+ "Standard": {
+  "Temperature": 288.7055555555556,
+  "Pressure": 101008.19434244999,
+  "GasMolarVolume": 0.023764720920932025
+ },
+ "Experiments": [
+  {
+   "Name": "Dew point",
+   "Kind": "Saturation",
+   "Temperature": 0.0,
+   "Pressures": [],
+   "ReferencePressure": 0.0,
+   "StageTemperatures": [],
+   "Gas": [],
+   "GasFractions": [],
+   "Measured": {
+    "Kind": "saturation",
+    "Values": {
+     "saturation_pressure": 27680354.525177926,
+     "dew_point": 1.0
+    },
+    "Columns": {},
+    "Rows": 0
+   },
+   "Weights": {
+    "saturation_pressure": 3.0,
+    "liquid_volume": 0.3
+   }
+  },
+  {
+   "Name": "CCE",
+   "Kind": "ConstantCompositionExpansion",
+   "Temperature": 0.0,
+   "Pressures": [
+    41469869.11117793,
+    39491073.768086925,
+    36643539.00607792,
+    34575111.81817792,
+    33196160.359577924,
+    31817208.900977924,
+    30438257.442377925,
+    29748781.713077925,
+    29059305.983777925,
+    28369830.254477926,
+    27680354.525177926,
+    27025352.582342926,
+    26301403.066577926,
+    25680874.910207927,
+    24232975.878677927,
+    22854024.420077927,
+    20785597.232177928,
+    18751643.830742925,
+    15304265.184242927,
+    11167410.808442926,
+    7065030.219107927
+   ],
+   "ReferencePressure": 0.0,
+   "StageTemperatures": [],
+   "Gas": [],
+   "GasFractions": [],
+   "Measured": {
+    "Kind": "cce",
+    "Values": {},
+    "Columns": {
+     "relative_volume": [
+      0.8808,
+      0.8948,
+      0.9158,
+      0.9317,
+      0.9434,
+      0.9559,
+      0.969,
+      0.9758,
+      0.9832,
+      0.9914,
+      1.0,
+      1.0089,
+      1.0194,
+      1.0299,
+      1.0559,
+      1.0878,
+      1.1496,
+      1.243,
+      1.5246,
+      2.1035,
+      3.5665
+     ],
+     "z": [
+      1.144,
+      1.107,
+      1.051,
+      1.009,
+      0.981,
+      0.953,
+      0.924,
+      0.909,
+      0.895,
+      0.881,
+      0.867,
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+     ]
+    },
+    "Rows": 21
+   },
+   "Weights": {
+    "saturation_pressure": 3.0,
+    "liquid_volume": 0.3
+   }
+  },
+  {
+   "Name": "CVD",
+   "Kind": "ConstantVolumeDepletion",
+   "Temperature": 0.0,
+   "Pressures": [
+    24232975.878677927,
+    20096121.502877925,
+    14580315.668477926,
+    9064509.834077926,
+    4272653.515442928
+   ],
+   "ReferencePressure": 27680354.525177926,
+   "StageTemperatures": [],
+   "Gas": [],
+   "GasFractions": [],
+   "Measured": {
+    "Kind": "cvd",
+    "Values": {},
+    "Columns": {
+     "liquid_volume": [
+      0.0,
+      0.033,
+      0.19399999999999998,
+      0.239,
+      0.225,
+      0.18100000000000002
+     ],
+     "produced": [
+      0.0,
+      0.053739999999999996,
+      0.15438000000000002,
+      0.35095999999999994,
+      0.57695,
+      0.76787
+     ],
+     "gas_z": [
+      0.867,
+      0.799,
+      0.748,
+      0.762,
+      0.819,
+      0.902
+     ],
+     "two_phase_z": [
+      0.867,
+      0.802,
+      0.744,
+      0.704,
+      0.671,
+      0.576
+     ],
+     "y_CO2": [
+      0.0018,
+      0.0018,
+      0.0018,
+      0.0018,
+      0.0019,
+      0.0021
+     ],
+     "y_N2": [
+      0.0013,
+      0.0013,
+      0.0014000000000000002,
+      0.0015,
+      0.0015,
+      0.0014000000000000002
+     ],
+     "y_C1": [
+      0.6172,
+      0.631,
+      0.6520999999999999,
+      0.6979000000000001,
+      0.7077,
+      0.6659
+     ],
+     "y_C2": [
+      0.141,
+      0.1427,
+      0.141,
+      0.1412,
+      0.1463,
+      0.1606
+     ],
+     "y_C3": [
+      0.0837,
+      0.0825,
+      0.081,
+      0.0757,
+      0.07730000000000001,
+      0.0911
+     ],
+     "y_i-C4": [
+      0.0098,
+      0.0091,
+      0.0095,
+      0.008100000000000001,
+      0.0079,
+      0.0101
+     ],
+     "y_n-C4": [
+      0.0345,
+      0.034,
+      0.0316,
+      0.0271,
+      0.0259,
+      0.0331
+     ],
+     "y_i-C5": [
+      0.0091,
+      0.0086,
+      0.0084,
+      0.0067,
+      0.0055000000000000005,
+      0.0068000000000000005
+     ],
+     "y_n-C5": [
+      0.0152,
+      0.013999999999999999,
+      0.0139,
+      0.0097,
+      0.008100000000000001,
+      0.0102
+     ],
+     "y_C6": [
+      0.0179,
+      0.016,
+      0.0152,
+      0.0103,
+      0.0073,
+      0.008
+     ],
+     "y_C7+": [
+      0.06849999999999999,
+      0.059000000000000004,
+      0.0441,
+      0.02,
+      0.0106,
+      0.010700000000000001
+     ]
+    },
+    "Rows": 6
+   },
+   "Weights": {
+    "saturation_pressure": 3.0,
+    "liquid_volume": 0.3
+   }
+  }
+ ],
+ "Fluid": {
+  "Equation": "PengRobinson",
+  "Components": [
+   {
+    "Name": "CO2",
+    "CriticalTemperature": 304.12,
+    "CriticalPressure": 7373999.999999999,
+    "AcentricFactor": 0.225,
+    "CriticalVolume": 9.4e-05,
+    "MolarMass": 0.04401,
+    "VolumeShift": -2.179604456070924e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "N2",
+    "CriticalTemperature": 126.2,
+    "CriticalPressure": 3397999.9999999995,
+    "AcentricFactor": 0.037,
+    "CriticalVolume": 9.01e-05,
+    "MolarMass": 0.028014,
+    "VolumeShift": -4.629472163486114e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "C1",
+    "CriticalTemperature": 190.56,
+    "CriticalPressure": 4599000.0,
+    "AcentricFactor": 0.011,
+    "CriticalVolume": 9.859999999999998e-05,
+    "MolarMass": 0.016042999999999998,
+    "VolumeShift": -4.2750658040433605e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "C2",
+    "CriticalTemperature": 305.32,
+    "CriticalPressure": 4872000.0,
+    "AcentricFactor": 0.099,
+    "CriticalVolume": 0.00014549999999999999,
+    "MolarMass": 0.03007,
+    "VolumeShift": -4.597003248917424e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "C3",
+    "CriticalTemperature": 369.83,
+    "CriticalPressure": 4248000.0,
+    "AcentricFactor": 0.152,
+    "CriticalVolume": 0.00019999999999999998,
+    "MolarMass": 0.044097000000000004,
+    "VolumeShift": -4.860066449227804e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "i-C4",
+    "CriticalTemperature": 407.8,
+    "CriticalPressure": 3640000.0,
+    "AcentricFactor": 0.184,
+    "CriticalVolume": 0.0002627,
+    "MolarMass": 0.058122999999999994,
+    "VolumeShift": -6.11648713299927e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "n-C4",
+    "CriticalTemperature": 425.12,
+    "CriticalPressure": 3796000.0,
+    "AcentricFactor": 0.2,
+    "CriticalVolume": 0.00025499999999999996,
+    "MolarMass": 0.058122999999999994,
+    "VolumeShift": -4.889932769858822e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "i-C5",
+    "CriticalTemperature": 460.4,
+    "CriticalPressure": 3379999.9999999995,
+    "AcentricFactor": 0.228,
+    "CriticalVolume": 0.000306,
+    "MolarMass": 0.07215,
+    "VolumeShift": -5.357176758100324e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "n-C5",
+    "CriticalTemperature": 469.7,
+    "CriticalPressure": 3370000.0000000005,
+    "AcentricFactor": 0.252,
+    "CriticalVolume": 0.00031299999999999996,
+    "MolarMass": 0.07215,
+    "VolumeShift": -3.516163394883997e-06,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "C6",
+    "CriticalTemperature": 507.6,
+    "CriticalPressure": 3025000.0,
+    "AcentricFactor": 0.3,
+    "CriticalVolume": 0.00037099999999999996,
+    "MolarMass": 0.086177,
+    "VolumeShift": -8.683603869010805e-07,
+    "SpecificGravity": 0.0,
+    "BoilingPoint": 0.0,
+    "IsFraction": false
+   },
+   {
+    "Name": "C7",
+    "CriticalTemperature": 515.57136895663,
+    "CriticalPressure": 2890034.657227881,
+    "AcentricFactor": 0.31165612156701716,
+    "CriticalVolume": 0.0003744601032126507,
+    "MolarMass": 0.09467589939149074,
+    "VolumeShift": -2.7134657870809967e-07,
+    "SpecificGravity": 0.7322111938874223,
+    "BoilingPoint": 367.09464721326515,
+    "IsFraction": true
+   },
+   {
+    "Name": "C8-9",
+    "CriticalTemperature": 557.6470094798491,
+    "CriticalPressure": 2589636.9387970455,
+    "AcentricFactor": 0.3761708631231353,
+    "CriticalVolume": 0.00045733667601286,
+    "MolarMass": 0.1161738220497584,
+    "VolumeShift": 4.8708760828913714e-08,
+    "SpecificGravity": 0.7658136984916233,
+    "BoilingPoint": 407.0519737295687,
+    "IsFraction": true
+   },
+   {
+    "Name": "C10-12",
+    "CriticalTemperature": 611.942771842566,
+    "CriticalPressure": 2160595.090070223,
+    "AcentricFactor": 0.4826896945893666,
+    "CriticalVolume": 0.0005948934931459842,
+    "MolarMass": 0.15041233891612138,
+    "VolumeShift": 6.264157860885896e-06,
+    "SpecificGravity": 0.7995746054713582,
+    "BoilingPoint": 463.55260667572963,
+    "IsFraction": true
+   },
+   {
+    "Name": "C13-17",
+    "CriticalTemperature": 675.4642473846845,
+    "CriticalPressure": 1700914.8847370835,
+    "AcentricFactor": 0.6383865934471109,
+    "CriticalVolume": 0.0008144628615690383,
+    "MolarMass": 0.20333383632025592,
+    "VolumeShift": 2.2256796480321596e-05,
+    "SpecificGravity": 0.8333147374626169,
+    "BoilingPoint": 535.3994715867693,
+    "IsFraction": true
+   },
+   {
+    "Name": "C18-30+",
+    "CriticalTemperature": 772.6041415962108,
+    "CriticalPressure": 1163907.9231265017,
+    "AcentricFactor": 0.927302596363103,
+    "CriticalVolume": 0.0013623928506026086,
+    "MolarMass": 0.3301806432243462,
+    "VolumeShift": 6.085662097366802e-05,
+    "SpecificGravity": 0.8836246484762785,
+    "BoilingPoint": 654.4412706362067,
+    "IsFraction": true
+   }
+  ],
+  "Composition": [
+   0.0018,
+   0.0013,
+   0.6172,
+   0.141,
+   0.0837,
+   0.0098,
+   0.0345,
+   0.0091,
+   0.0152,
+   0.0179,
+   0.025959932650460767,
+   0.016500211648665684,
+   0.011736842714466096,
+   0.008412640741984641,
+   0.0058903722444228115
+  ],
+  "Kij": [
+   [
+    0.0,
+    0.0,
+    0.105,
+    0.13,
+    0.125,
+    0.12,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115,
+    0.115
+   ],
+   [
+    0.0,
+    0.0,
+    0.025,
+    0.01,
+    0.09,
+    0.095,
+    0.095,
+    0.1,
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11,
+    0.11
+   ],
+   [
+    0.105,
+    0.025,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.07390562602099579,
+    0.09526198496806762,
+    0.12581726230378307,
+    0.16479513405934604,
+    0.2306716579475213
+   ],
+   [
+    0.13,
+    0.01,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.125,
+    0.09,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.12,
+    0.095,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.095,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.1,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.11,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.11,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.11,
+    0.07390562602099579,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.11,
+    0.09526198496806762,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.11,
+    0.12581726230378307,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.11,
+    0.16479513405934604,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.115,
+    0.11,
+    0.2306716579475213,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  ]
+ }
+}

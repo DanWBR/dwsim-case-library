@@ -13,6 +13,8 @@
 
 A black oil is taken from its laboratory PVT report to a process flowsheet. The PVT Analysis tool splits the C7+ fraction of the reported composition, simulates the experiments of the report (bubble point, constant composition expansion, differential liberation and four separator tests), fits three parameters of the heavy fractions to the measured data and sends the fluid to the flowsheet as compounds, a property package and a stream.
 
+The study is also a set of test data for the tool: it has the measured tables of every experiment of the report, the oil viscosity of the differential liberation, and a minimum miscibility pressure calculation with carbon dioxide. A second study, of a gas condensate with a constant volume depletion, comes in the same folder.
+
 The flowsheet then repeats one of the separator tests with ordinary unit operations: the reservoir oil is let down and cooled to a separator at 100 psig and 75 °F, and the separator oil goes to a stock tank at atmospheric pressure. The gas-oil ratios read from the solved streams are the ones the tool computes for the same test (133.5 Sm³/Sm³ in total) and stay within 2.4 % of the laboratory value (136.8 Sm³/Sm³).
 
 ![Flowsheet](reservoir-oil-pvt-two-stage-separation.png)
@@ -81,13 +83,52 @@ Oil density of the differential liberation, simulated and measured:
 
 ![Experiments](pvt-analysis-experiments.png)
 
+## Viscosity
+
+The experiment `DLE viscosity` has the oil viscosity the laboratory measured along the differential liberation, 18 points from 345 bar down to atmospheric pressure, with the minimum at the bubble point. The fluid of the study uses the Lohrenz-Bray-Clark correlation with the critical volume of the heavy fractions fitted (multiplier 1.005).
+
+| Viscosity model | Variables fitted | Average deviation of the oil viscosity |
+|---|---|---|
+| Lohrenz-Bray-Clark | none | 3.1 % |
+| Lohrenz-Bray-Clark | critical volume of the heavy fractions | 2.4 % |
+| Lohrenz-Bray-Clark | critical volume and coefficients 2 and 3 | 1.5 % |
+| Corresponding states (Pedersen) | none | 1.6 % |
+| Corresponding states (Pedersen) | molar mass coefficient | 1.5 % |
+
+The deviations are fractions of the largest measured value (1.286 cP). The gas viscosity of the report was calculated by the laboratory from a correlation, so it is shown with weight zero.
+
+![Viscosity](pvt-analysis-viscosity.png)
+
+## Minimum miscibility pressure
+
+The experiment `MMP with CO2` searches the lowest pressure at which carbon dioxide becomes miscible with the oil at reservoir temperature, by the multiple mixing cell method. The tool finds 205.8 bar, with a combined condensing and vaporizing drive. The plot shows the shortest tie line of the mixing cells falling to zero as the pressure rises.
+
+| Injection gas | Minimum miscibility pressure | Drive |
+|---|---|---|
+| CO₂ | 205.8 bar | condensing and vaporizing |
+| 60 % C1, 20 % C2, 20 % C3 | 232 to 235 bar | condensing and vaporizing |
+| Methane | 415.9 bar | vaporizing |
+| Nitrogen | 417.0 bar | vaporizing |
+
+Only the first one is in the study; the others are there to try (change the injection gas of the experiment, for example to `C1=0.6, C2=0.2, C3=0.2`, and set the first pressure of the search to 150 bar for the lean gases). Methane and nitrogen give about the same pressure because in a vaporizing drive the result depends on the oil alone. These values do not have a measured slim tube test behind them.
+
+![Miscibility](pvt-analysis-miscibility.png)
+
 ## Running the case
 
 1. Open `reservoir-oil-pvt-two-stage-separation.dwxmz`. The flowsheet is solved as saved.
 2. In DWSIM Patreon, open **Tools > PVT Analysis**. The study next to the flowsheet (same name, extension `.dwpvt`) is loaded with the composition, the experiments and the fitted fluid.
-3. **Run** simulates the experiments with the fitted fluid. **Discard fit** followed by **Run** shows the characterization before the fit, and **Fit** repeats the regression.
+3. **Run** simulates the experiments with the fitted fluid. It takes about half a minute, almost all of it in the minimum miscibility pressure search; remove that experiment to see the others in a fraction of a second. **Discard fit** followed by **Run** shows the characterization before the fit, and **Fit** repeats the regression.
 4. **Send to flowsheet** writes the compounds, the property package `PVT Analysis` and a stream `PVT fluid` with the fluid at reservoir conditions. Sending again updates the same compounds and package, so `reservoir-oil` follows a new fit.
 5. **Export...** writes the fluid for a reservoir simulator: compositional keywords, black-oil tables (PVTO, PVTG, PVTW), and a report of the study.
+
+Things to try with these data:
+
+- **Fit the viscosity:** tick the variable `Viscosity (LBC): critical volume of the heavy fractions` alone and press **Fit**; only the measured viscosities enter the fit. Then change **Viscosity model** to the corresponding states one and run again.
+- **Fit in steps:** tick **Suggested steps** to fit the bubble point, then the densities, then every quantity, then the viscosity.
+- **Change the characterization:** set the pseudocomponents of the heavy end to 3 or to 0 (every fraction up to C30+), or the critical properties to Twu, and see what the fit has to do.
+- **Change the weights:** set every weight to 1 and fit; the bubble point is then one value among 148 and hardly moves.
+- **A gas condensate:** press **Load study...** and open `gas-condensate-pvt-study.dwpvt`, with a dew point, a constant composition expansion and a constant volume depletion with the composition of the produced gas. Its fitted fluid matches the dew point within 0.1 % and the retrograde liquid within 7 % of the largest measured value.
 
 ## Results
 
@@ -115,14 +156,15 @@ In the flowsheet 49.5 % of the feed moles leave V-100 as gas and 11.6 % of the s
 ## Files
 
 - `reservoir-oil-pvt-two-stage-separation.dwxmz` - the DWSIM flowsheet.
-- `reservoir-oil-pvt-two-stage-separation.dwpvt` - the study of the PVT Analysis tool: composition, experiments with the measured tables, weights and the fitted fluid.
+- `reservoir-oil-pvt-two-stage-separation.dwpvt` - the study of the PVT Analysis tool: composition, experiments with the measured tables (bubble point, expansion, differential liberation, oil viscosity, four separator tests), a minimum miscibility pressure experiment, weights and the fitted fluid.
+- `gas-condensate-pvt-study.dwpvt` - a second study for the tool: the gas condensate of the same textbook, with its dew point, expansion and constant volume depletion, and its fitted fluid.
 - `reservoir-oil-pvt-two-stage-separation.png`, `pvt-analysis-*.png` - the figures above.
 
 ## Confidentiality
 
-The fluid is the oil of the example PVT report in a published textbook (see the reference). It is not data from a client, a project or an operating field.
+The two fluids are the oil and the gas condensate of the example PVT reports in a published textbook (see the reference). It is not data from a client, a project or an operating field.
 
 ## References
 
-- C. H. Whitson and M. R. Brulé, *Phase Behavior*, SPE Monograph 20, Society of Petroleum Engineers, 2000. Chapter 6, the example report of the oil of well 4 (composition, constant composition expansion, differential liberation and separator tests), and chapters 4 and 5 for the equation of state and the characterization of the heavy end.
+- C. H. Whitson and M. R. Brulé, *Phase Behavior*, SPE Monograph 20, Society of Petroleum Engineers, 2000. Chapter 6, the example reports of the oil of well 4 (composition, constant composition expansion, differential liberation with viscosity, and separator tests) and of the gas condensate of well 7 (constant composition expansion and constant volume depletion), and chapters 4 and 5 for the equation of state and the characterization of the heavy end.
 - DWSIM User Guide, PVT Analysis.

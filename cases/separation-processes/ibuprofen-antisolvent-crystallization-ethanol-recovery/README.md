@@ -60,9 +60,9 @@ Ibuprofen is very soluble in ethanol and nearly insoluble in water, so adding wa
 - **Oiling out during the mixing:** the same model says that a liquid with all the ibuprofen still dissolved (0.99 g per g of ethanol) splits into two liquids at 25 °C once the water reaches 36 wt % of the solvent, well before the final 57 wt %. The flowsheet is at equilibrium and doesn't see this. A real crystallizer has to keep the crystallization ahead of the water addition, with seeds and a slow addition, or the ibuprofen separates as an oil first.
 - **The make-up of ethanol has to equal the losses:** T-101 has a fixed distillate rate. With a make-up of 1 kg/h, more than what leaves with the product, the ethanol built up in the loop until the distillate reached the azeotrope and the column stopped converging. With 0.02 kg/h the two recycles close.
 - **The water held in the loop is the make-up divided by the purge fraction:** 121 kg/h and 20 % give 605 kg/h of water in the bottoms, and 57 wt % of water in the liquor.
-- **Column solver:** the default bubble point solver converged the column once and failed when the column was solved again inside the recycles. The Naphtali-Sandholm solver was stable.
+- **Column solver:** T-101 uses the Naphtali-Sandholm solver.
 - **The fitted pairs made the column fail:** above their range they give ibuprofen a very large activity coefficient in water. The recovery section has a package of its own for that reason; the cost is that the dissolved ibuprofen is a simple heavy compound there, and that the feed of the column is taken as one liquid.
-- **Smaller amounts of water didn't converge:** with 55 and 75 kg/h of make-up water the column reached its iteration limit. The table below has the two cases that converged.
+- **The amount of water has a lower limit:** the cases from 75 to 150 kg/h of make-up water converge and are in the table below. With 60 kg/h the column doesn't converge.
 - **Both recycle blocks use Wegstein acceleration on every pass** (`AccelerationMethod`, `WegsteinParameters.AccelFreq = 1`, `MaximumIterations = 300`), set from the script that built the case, and both tear streams have a first estimate.
 - **The ibuprofen of the bottoms returns as a solid:** at 30 °C nearly all the ibuprofen of the cooled bottoms is out of solution, and it goes back to the crystallizer suspended in the recovered water. The waste water takes its share, which is the whole loss of the process.
 - **The filter area is illustrative:** it comes from the default cake and medium resistances of the block.
@@ -91,12 +91,17 @@ Ibuprofen is very soluble in ethanol and nearly insoluble in water, so adding wa
 | Fresh ethanol per kg of product | 0.04 | g |
 | Fresh water per kg of product | 0.25 | kg |
 
-The amount of water in the loop, for the two cases that converged:
+The amount of water in the loop:
 
 | Make-up water, kg/h | Water in the solvent of the liquor, wt % | Liquor, g ibuprofen / g ethanol | Crystallized per pass, % | Yield, % | Reboiler, kW |
 |---|---|---|---|---|---|
+| 75 | 46 | 0.219 | 81.0 | 95.9 | 362 |
+| 85 | 49 | 0.169 | 84.9 | 96.9 | 407 |
 | 95 | 51 | 0.133 | 87.8 | 97.5 | 453 |
-| 121 | 57 | 0.077 | 92.7 | 98.6 | 573 |
+| 108 | 54 | 0.100 | 90.7 | 98.1 | 513 |
+| 121 | 57 | 0.076 | 92.7 | 98.6 | 573 |
+| 135 | 59 | 0.059 | 94.3 | 98.9 | 638 |
+| 150 | 61 | 0.045 | 95.6 | 99.1 | 709 |
 
 More water crystallizes more ibuprofen in each pass and costs more in the column, because all of it has to be boiled up as the ethanol is stripped.
 

@@ -14,5 +14,6 @@ Distillation, absorption, extraction, flash, and membranes.
 | [Cachaça in a pot still: a batch distillation in DWSIM's dynamic mode, cut into head, heart and tails against a laboratory alembic](cachaca-pot-still-batch-distillation) | community | 10.2.12 | Nicolas Spogis (AI4Tech) |
 | [Soybean oil miscella distillation - the evaporators and the hexane stripper of a crushing plant](soybean-oil-miscella-distillation) | community | 10.2.13 | Nicolas Spogis (AI4Tech) |
 | [Cooling crystallization of ibuprofen from n-heptane, with mother liquor recycle](ibuprofen-cooling-crystallization-with-recycle) | community | 10.2.17+ | Daniel Medeiros |
+| [Antisolvent crystallization of ibuprofen from ethanol with water, and recovery of the ethanol](ibuprofen-antisolvent-crystallization-ethanol-recovery) | community | 10.2.17+ | Daniel Medeiros |
 
 Add a case with the [case template](../../templates/CASE_TEMPLATE.md). See [CONTRIBUTING.md](../../CONTRIBUTING.md). Verified cases are listed first.

@@ -55,6 +55,7 @@ Each case is a folder with a `README.md` built from the [case template](template
 | [Ethanol distillery](cases/separation-processes/ethanol-distillery) | separation-processes | fermentation → degassing → 25-stage column; distillate below the azeotrope |
 | [Benzene/toluene distillation with feed preheat](cases/separation-processes/benzene-toluene-distillation) | separation-processes | UA-rated preheater; 99.99 % overhead / 99.98 % bottoms |
 | [Biogas-to-grid](cases/bioprocesses/biogas-to-grid) | bioprocesses | anaerobic digester + amine upgrader; H2S path verified end to end |
+| [Citric acid by fermentation of glucose](cases/bioprocesses/citric-acid-fermentation-evaporative-crystallization) | bioprocesses | aerobic Bio Reactor, centrifuge, degassing, evaporative Crystallizer of the anhydrous acid at 60 °C with an NRTL pair fitted to tabulated solubilities, filter, vacuum dryer and recycle of the mother liquor: 864 kg/h, 0.58 kg per kg of glucose |
 | [Hydroelectric turbine with heat recovery](cases/clean-energy/hydroelectric-heat-recovery) | clean-energy | 20.8 kW = ṁ·g·h·η exactly |
 | [Green hydrogen: solar + electrolysis](cases/clean-energy/green-hydrogen-solar-electrolysis) | clean-energy | H2 production on Faraday's law; ~48 kWh/kg |
 | [Polystyrene devolatilization](cases/separation-processes/polymer-devolatilization) | separation-processes | PC-SAFT non-volatile polymer flash; 99 wt% melt, 99.7 % solvent recovered |

@@ -64,8 +64,8 @@ After its crystallization from n-heptane, ibuprofen leaves the filter as a cake 
 | Quantity | DWSIM | Unit |
 |---|---|---|
 | Heating to the boiling temperature | 38 | min |
-| Drying time, heating included | 5.11 | h |
-| Cycle time, with loading and unloading | 7.11 | h |
+| Drying time, heating included | 5.12 | h |
+| Cycle time, with loading and unloading | 7.12 | h |
 | n-Heptane in the product | 999 ppm | ICH Q3C limit 5000 ppm |
 | Boiling temperature of heptane at 50 mbar | 21.3 | °C |
 | Highest bed temperature | 50.6 | °C |
@@ -87,10 +87,10 @@ How long the batch stays in the dryer for each level of heptane in the product:
 
 | n-Heptane in the product, ppm | Drying time, h | Cycle, h | Final bed temperature, °C | Capacity, kg/h of wet cake | Under the ICH Q3C limit |
 |---|---|---|---|---|---|
-| 4975 | 4.12 | 6.12 | 47.0 | 192.2 | yes |
-| 1996 | 4.71 | 6.71 | 49.4 | 175.2 | yes |
-| 999 | 5.11 | 7.11 | 50.6 | 165.4 | yes |
-| 500 | 5.48 | 7.48 | 51.5 | 157.3 | yes |
+| 4975 | 4.12 | 6.12 | 47.0 | 192.1 | yes |
+| 1996 | 4.72 | 6.72 | 49.4 | 175.2 | yes |
+| 999 | 5.12 | 7.12 | 50.6 | 165.3 | yes |
+| 500 | 5.48 | 7.48 | 51.5 | 157.2 | yes |
 | 200 | 5.92 | 7.92 | 52.4 | 148.5 | yes |
 
 The limit of 5000 ppm is reached in 4.12 h. Going from there to 200 ppm takes the drying to 5.92 h: the last tenths of a percent are the slow part, because the heat that reaches the bed then mostly warms the solid.
@@ -102,8 +102,8 @@ The drying time to 0.1 % over jacket temperatures and chamber pressures. Each ce
 | 40 | 4.48 h, 35.4 °C | 6.54 h, 37.8 °C | 13.29 h, 39.6 °C | no drying |
 | 45 | 4.29 h, 39.6 °C | 5.91 h, 42.1 °C | 9.50 h, 44.0 °C | 41.17 h, 45.0 °C |
 | 50 | 4.13 h, 43.8 °C | 5.46 h, 46.4 °C | 7.86 h, 48.4 °C | 12.56 h, 49.5 °C |
-| 55 | 3.99 h, 47.9 °C | 5.11 h, 50.6 °C | 6.90 h, 52.7 °C | 9.40 h, 53.9 °C |
-| 60 | 3.88 h, 52.1 °C | 4.84 h, 54.8 °C | 6.26 h, 57.0 °C | 7.91 h, 58.3 °C |
+| 55 | 3.99 h, 47.9 °C | 5.12 h, 50.6 °C | 6.90 h, 52.7 °C | 9.40 h, 53.9 °C |
+| 60 | 3.88 h, 52.1 °C | 4.85 h, 54.8 °C | 6.26 h, 57.0 °C | 7.91 h, 58.3 °C |
 
 ![Drying time map](drying-time-map.png)
 

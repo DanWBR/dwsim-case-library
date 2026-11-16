@@ -613,6 +613,23 @@
       ]
     },
     {
+      "assembly": "DWSIM.Extensions.PropertyPackages.Sugar",
+      "name": "Sugar Solutions property package",
+      "types": [
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarActivityModel",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarCompounds",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarModel",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarProperties",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarRole",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarSolutionsPropertyPackage",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarStreamAnalysis",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarStreamComposer",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarStreamReport",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarStreamSpec",
+        "DWSIM.Extensions.PropertyPackages.Sugar.SugarSystem"
+      ]
+    },
+    {
       "assembly": "DWSIM.Extensions.PropertyPackages.ThermoPack",
       "name": "ThermoPack property packages",
       "types": [

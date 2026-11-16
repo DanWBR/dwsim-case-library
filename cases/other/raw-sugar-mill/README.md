@@ -1,17 +1,17 @@
-# Raw sugar mill: extraction, five-effect evaporator, three-boiling pan house, dryer and bagasse boiler
+# Raw sugar mill: extraction, five-effect falling film evaporator, three-boiling pan house, dryer and bagasse boiler
 
 **Category:** other
 **Status:** community
 **DWSIM version:** 10.2.17 or later
-**DWSIM edition:** Patreon Edition (Sugar Solutions property package)
+**DWSIM edition:** Patreon Edition (Sugar Solutions property package, Falling Film Evaporator)
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
-> **Requirement.** The Sugar Solutions (S-UNIFAC) property package belongs to DWSIM Patreon. The file opens anywhere, but it only solves where the package is licensed.
+> **Requirement.** The Sugar Solutions (S-UNIFAC) property package and the Falling Film Evaporator belong to DWSIM Patreon. The file opens anywhere, but it only solves where they are licensed.
 
 ## Summary
 
-A raw sugar mill crushing 100 t/h of cane, from the diffuser to the dried sugar and the bagasse boiler. The juice is extracted, heated, clarified and concentrated to a syrup at Bx 65 in a five-effect evaporator; a three-boiling pan house (A, B and C massecuites, with the B and C sugars returned as seed) crystallizes the sucrose, and the A sugar is dried with hot air. All the bagasse burns in the boiler, which raises 21 bar steam for a back-pressure turbine. The mill makes 12.2 t/h of raw sugar at 99.1 % sucrose, recovers 89.6 % of the sucrose in the cane, and the turbine delivers 5.3 MW. The whole flowsheet, with its two recycles, solves in about 40 s.
+A raw sugar mill crushing 100 t/h of cane, from the diffuser to the dried sugar and the bagasse boiler. The juice is extracted, heated, clarified and concentrated to a syrup at Bx 65 in a five-effect falling film evaporator; a three-boiling pan house (A, B and C massecuites, with the B and C sugars returned as seed) crystallizes the sucrose, and the A sugar is dried with hot air. All the bagasse burns in the boiler, which raises 21 bar steam for a back-pressure turbine. The mill makes 12.2 t/h of raw sugar at 99.1 % sucrose, recovers 89.6 % of the sucrose in the cane, and the turbine delivers 5.3 MW. The whole flowsheet, with its two recycles, solves in about 40 s.
 
 ## Process description
 
@@ -19,7 +19,7 @@ A raw sugar mill crushing 100 t/h of cane, from the diffuser to the dried sugar 
 
 **Juice heating and clarification:** the mixed juice is pumped to 3.5 bar (P-101), heated to 103 °C (E-101) and flashed to 1 atm (V-101, V-102), as in the heaters and flash tank of a mill. The clarifier C-101 settles the mud solids with 10 % of the juice; the mud filter F-101 returns 85 % of that juice, and the filter cake leaves the process.
 
-**Evaporation:** five effects at 1.70, 1.25, 0.85, 0.50 and 0.16 bar, forward feed, heated by exhaust steam at 2.2 bar. In each effect the heating vapour condenses to saturated liquid in CD-n, and its latent heat goes through an energy stream to EV-n, where the juice enters at the pressure of the effect and boils. The separator VS-n splits the vapour, which heats the next effect, from the concentrated juice. The vapour of the last effect goes to the condenser.
+**Evaporation:** five effects at 1.70, 1.25, 0.85, 0.50 and 0.16 bar, forward feed, heated by exhaust steam at 2.2 bar. In each effect the heating vapour condenses to saturated liquid on the shell side (the cooler CD-n), and its latent heat goes through an energy stream to the falling film evaporator EV-n. The juice enters EV-n at the pressure of the effect, boils, and leaves split into the vapour, which heats the next effect, and the concentrated juice; EV-n also keeps a five-point evaporation profile. The vapour of the last effect goes to the condenser.
 
 **Pan house:** three vacuum pans at 0.16 bar, each a mixer, a heater at the boiling temperature and a separator for the pan vapour:
 - the A pan (62 °C) boils the syrup with the B sugar as seed; the A sugar is the product;
@@ -65,7 +65,7 @@ The centrifugals CF-A, CF-B and CF-C (solids separators) keep 5, 7 and 10 % of t
 - **Start both recycles near the answer.** The B and C sugar returns carry crystals and a molasses film. Starting them at 4.2 and 0.9 t/h with the composition of a converged run, REC-B converges in 2 iterations and REC-C in 1.
 - **Recycle tolerance:** the default mass flow tolerance of a new recycle (0.01 % of the flow) is below the noise of the solid-liquid flashes in the sugar returns (about 2e-4 kg/s). At that tolerance REC-B cycles until it runs out of iterations; the case uses 0.1 % and Wegstein acceleration.
 - **C pan temperature:** at 80 °C the C pan sits near the saturation of the B molasses, and the two recycles alternate between two states without converging. At 75 °C they converge in two iterations.
-- **Evaporator effects:** in a forward-feed train the vapour and the juice leave each effect at the same temperature. A heat exchanger that picks its hot side by comparing inlet temperatures can swap the sides on that tie. A cooler and a heater joined by an energy stream avoid the comparison and each needs a single flash.
+- **Evaporator effects:** in a forward-feed train the vapour and the juice leave each effect at the same temperature. A heat exchanger that picks its hot side by comparing inlet temperatures can swap the sides on that tie. A cooler that condenses the heating vapour, with its duty passed to the falling film evaporator through an energy stream, avoids the comparison.
 - **Fixed steam flows:** the exhaust steam (16.08 t/h) and the boiler feed water (63.09 t/h) were set with Adjusts on the syrup Brix and the stack temperature, and then fixed: each Adjust iteration re-solves the pan house and its recycles.
 - **Steam circuit:** the feed water, the live steam and the turbine use the steam tables, so the turbine works with the IAPWS-IF97 entropy.
 - **Solve time:** about 40 s for the whole flowsheet, and about 15 s when re-solved from the saved file.

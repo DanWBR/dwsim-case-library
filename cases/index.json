@@ -172,7 +172,18 @@
   },
   {
    "path": "cases/other/raw-sugar-mill/raw-sugar-mill.dwxmz",
-   "preview": "cases/other/raw-sugar-mill/raw-sugar-mill.png"
+   "preview": "cases/other/raw-sugar-mill/raw-sugar-mill.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Extension Pack unit operations",
+     "assembly": "DWSIM.UnitOperations.ExtensionPack"
+    },
+    {
+     "name": "Sugar Solutions property package",
+     "assembly": "DWSIM.Extensions.PropertyPackages.Sugar"
+    }
+   ]
   },
   {
    "path": "cases/other/uht-milk-direct-steam-injection/uht-milk-direct-steam-injection.dwxmz",

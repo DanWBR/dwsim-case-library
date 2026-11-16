@@ -289,6 +289,17 @@
   {
    "path": "cases/separation-processes/soybean-oil-miscella-distillation/soybean-oil-miscella-distillation.dwxmz",
    "preview": "cases/separation-processes/soybean-oil-miscella-distillation/soybean-oil-miscella-distillation.png"
+  },
+  {
+   "path": "cases/other/raw-sugar-mill/raw-sugar-mill.dwxmz",
+   "preview": "cases/other/raw-sugar-mill/raw-sugar-mill.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Sugar Solutions property package",
+     "assembly": "DWSIM.Extensions.PropertyPackages.Sugar"
+    }
+   ]
   }
  ]
 }

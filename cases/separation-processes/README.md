@@ -17,5 +17,6 @@ Distillation, absorption, extraction, flash, and membranes.
 | [Antisolvent crystallization of ibuprofen from ethanol with water, and recovery of the ethanol](ibuprofen-antisolvent-crystallization-ethanol-recovery) | community | 10.2.17+ | Daniel Medeiros |
 | [Solvent swap of ibuprofen from ethanol to n-heptane, with cooling crystallization](ibuprofen-solvent-swap-ethanol-to-heptane) | community | 10.2.17+ | Daniel Medeiros |
 | [Freeze drying of a 5 % mannitol solution in vials](freeze-drying-mannitol-solution-vials) | community | 10.2.17+ | Daniel Medeiros |
+| [Freeze drying of a 5 % sucrose solution in vials](freeze-drying-sucrose-solution-vials) | community | 10.2.17+ | Daniel Medeiros |
 
 Add a case with the [case template](../../templates/CASE_TEMPLATE.md). See [CONTRIBUTING.md](../../CONTRIBUTING.md). Verified cases are listed first.

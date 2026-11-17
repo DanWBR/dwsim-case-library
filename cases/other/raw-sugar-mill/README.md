@@ -11,7 +11,7 @@
 
 ## Summary
 
-A raw sugar mill crushing 100 t/h of cane, from the diffuser to the dried sugar and the bagasse boiler. The juice is extracted, heated, clarified and concentrated to a syrup at Bx 65 in a five-effect falling film evaporator; a three-boiling pan house (A, B and C massecuites, with the B and C sugars returned as seed) crystallizes the sucrose, and the A sugar is dried with hot air. All the bagasse burns in the boiler, which raises 21 bar steam for a back-pressure turbine. The mill makes 12.2 t/h of raw sugar at 99.1 % sucrose, recovers 89.6 % of the sucrose in the cane, and the turbine delivers 5.3 MW. The whole flowsheet, with its two recycles, solves in about 40 s.
+A raw sugar mill crushing 100 t/h of cane, from the diffuser to the dried sugar and the bagasse boiler. The juice is extracted, heated, clarified and concentrated to a syrup at Bx 65 in a five-effect falling film evaporator; a three-boiling pan house (A, B and C massecuites, with the B and C sugars returned as seed) crystallizes the sucrose, and the A sugar is dried with hot air. All the bagasse burns in the boiler, which raises 21 bar steam for a back-pressure turbine. The mill makes 12.2 t/h of raw sugar at 99.1 % sucrose, recovers 89.6 % of the sucrose in the cane, and the turbine delivers 5.3 MW. The whole flowsheet, with its two recycles, solves in about 35 s.
 
 ## Process description
 
@@ -68,7 +68,7 @@ The centrifugals CF-A, CF-B and CF-C (solids separators) keep 5, 7 and 10 % of t
 - **Evaporator effects:** in a forward-feed train the vapour and the juice leave each effect at the same temperature. A heat exchanger that picks its hot side by comparing inlet temperatures can swap the sides on that tie. A cooler that condenses the heating vapour, with its duty passed to the falling film evaporator through an energy stream, avoids the comparison.
 - **Fixed steam flows:** the exhaust steam (16.08 t/h) and the boiler feed water (63.09 t/h) were set with Adjusts on the syrup Brix and the stack temperature, and then fixed: each Adjust iteration re-solves the pan house and its recycles.
 - **Steam circuit:** the feed water, the live steam and the turbine use the steam tables, so the turbine works with the IAPWS-IF97 entropy.
-- **Solve time:** about 40 s for the whole flowsheet, and about 15 s when re-solved from the saved file.
+- **Solve time:** about 35 s for the whole flowsheet, and about 15 s when re-solved from the saved file.
 
 ## Results
 

@@ -14,6 +14,17 @@
    "preview": "cases/bioprocesses/citric-acid-fermentation-evaporative-crystallization/citric-acid-fermentation-evaporative-crystallization.png"
   },
   {
+   "path": "cases/bioprocesses/sugarcane-mill-annexed-distillery/sugarcane-mill-annexed-distillery.dwxmz",
+   "preview": "cases/bioprocesses/sugarcane-mill-annexed-distillery/sugarcane-mill-annexed-distillery.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Sugar Solutions property package",
+     "assembly": "DWSIM.Extensions.PropertyPackages.Sugar"
+    }
+   ]
+  },
+  {
    "path": "cases/carbon-capture/beccs-fermentation-co2-dense-phase-pipeline/beccs-fermentation-co2-dense-phase-pipeline.dwxmz",
    "preview": "cases/carbon-capture/beccs-fermentation-co2-dense-phase-pipeline/beccs-fermentation-co2-dense-phase-pipeline.png"
   },

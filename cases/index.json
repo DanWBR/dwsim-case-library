@@ -91,6 +91,17 @@
    "preview": "cases/fluid-flow-and-piping/dosing-pump-flow-control-dynamics/dosing-pump-flow-control-dynamics.png"
   },
   {
+   "path": "cases/fluid-flow-and-piping/fire-water-network-tank-park/fire-water-network-tank-park.dwxmz",
+   "preview": "cases/fluid-flow-and-piping/fire-water-network-tank-park/fire-water-network-tank-park.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Pipe Network",
+     "assembly": "DWSIM.UnitOperations.PipeNetwork"
+    }
+   ]
+  },
+  {
    "path": "cases/fluid-flow-and-piping/fire-water-ring-network/fire-water-ring-network.dwxmz",
    "preview": "cases/fluid-flow-and-piping/fire-water-ring-network/fire-water-ring-network.png",
    "edition": "patreon",

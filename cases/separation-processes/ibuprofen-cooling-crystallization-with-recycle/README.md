@@ -2,12 +2,12 @@
 
 **Category:** separation-processes
 **Status:** community
-**DWSIM version:** 10.2.17 or later
+**DWSIM version:** 10.3.0 or later
 **DWSIM edition:** open source
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
-> **Requirement:** The case needs DWSIM 10.2.17 or later, where the Crystallizer can take the solubility from the property package and the flashes with solids keep the energy balance of the filter cake and of the dryer. Ibuprofen and its linear isomer aren't in the standard databases; both are stored inside the file.
+> **Requirement:** The case needs DWSIM 10.3.0 or later, where the Crystallizer can take the solubility from the property package and the flashes with solids keep the energy balance of the filter cake and of the dryer. Ibuprofen and its linear isomer aren't in the standard databases; both are stored inside the file.
 
 ## Summary
 

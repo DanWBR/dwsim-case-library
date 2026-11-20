@@ -2,7 +2,7 @@
 
 **Category:** other
 **Status:** community
-**DWSIM version:** 10.2.17 or later
+**DWSIM version:** 10.3.0 or later
 **DWSIM edition:** Patreon Edition (Sugar Solutions property package, Falling Film Evaporator)
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)

@@ -2,12 +2,12 @@
 
 **Category:** reaction-systems
 **Status:** community
-**DWSIM version:** 10.2.17 or later
+**DWSIM version:** 10.3.0 or later
 **DWSIM edition:** open source
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
-> **Requirement:** The case needs DWSIM 10.2.17 or later, for the Crystallizer with the solubility from the property package and for a distillation column that works with a property package that handles solids. Aspirin isn't in the standard databases; it is stored inside the file.
+> **Requirement:** The case needs DWSIM 10.3.0 or later, for the Crystallizer with the solubility from the property package and for a distillation column that works with a property package that handles solids. Aspirin isn't in the standard databases; it is stored inside the file.
 
 ## Summary
 

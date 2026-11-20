@@ -2,7 +2,7 @@
 
 **Category:** separation-processes
 **Status:** community
-**DWSIM version:** 10.2.17 or later
+**DWSIM version:** 10.3.0 or later
 **DWSIM edition:** the flowsheet opens in any edition; the PVT Analysis tool that produced its fluid belongs to the Patreon Edition
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)

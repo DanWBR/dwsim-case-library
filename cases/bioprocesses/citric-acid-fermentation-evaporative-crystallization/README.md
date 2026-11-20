@@ -2,12 +2,12 @@
 
 **Category:** bioprocesses
 **Status:** community
-**DWSIM version:** 10.2.17 or later
+**DWSIM version:** 10.3.0 or later
 **DWSIM edition:** open source
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
-> **Requirement:** The case needs DWSIM 10.2.17 or later, for the Crystallizer with the solubility from the property package, for the flash with solids in a mixture that has compounds without a vapor pressure correlation, and for the filter, the dryer and the separator with a stream without flow, which the study below needs.
+> **Requirement:** The case needs DWSIM 10.3.0 or later, for the Crystallizer with the solubility from the property package, for the flash with solids in a mixture that has compounds without a vapor pressure correlation, and for the filter, the dryer and the separator with a stream without flow, which the study below needs.
 
 ## Summary
 

@@ -2,12 +2,12 @@
 
 **Category:** reaction-systems
 **Status:** community
-**DWSIM version:** 10.2.17 or later
+**DWSIM version:** 10.3.0 or later
 **DWSIM edition:** open source
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
-> **Requirement:** The case needs DWSIM 10.2.17 or later. Earlier versions calculate the enthalpy of streams with solids differently and give a wrong temperature for the wet cake of this flowsheet, and the Crystallizer doesn't have the option to take the solubility from the property package. The nine compounds that aren't in the standard databases (ibuprofen, its two intermediates and the by-products among them) are stored inside the file.
+> **Requirement:** The case needs DWSIM 10.3.0 or later. Earlier versions calculate the enthalpy of streams with solids differently and give a wrong temperature for the wet cake of this flowsheet, and the Crystallizer doesn't have the option to take the solubility from the property package. The nine compounds that aren't in the standard databases (ibuprofen, its two intermediates and the by-products among them) are stored inside the file.
 
 ## Summary
 

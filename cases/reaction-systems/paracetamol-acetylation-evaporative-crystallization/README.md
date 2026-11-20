@@ -2,12 +2,12 @@
 
 **Category:** reaction-systems
 **Status:** community
-**DWSIM version:** 10.2.17 or later
+**DWSIM version:** 10.3.0 or later
 **DWSIM edition:** open source
 **Language:** English
 **Contributor:** Daniel Wagner Oliveira de Medeiros (@DanWBR)
 
-> **Requirement:** The case needs DWSIM 10.2.17 or later, for the Crystallizer with the solubility from the property package, the solid forms of a compound and the flashes with solids under vacuum. Paracetamol and 4-aminophenol aren't in the standard databases; both are stored inside the file.
+> **Requirement:** The case needs DWSIM 10.3.0 or later, for the Crystallizer with the solubility from the property package, the solid forms of a compound and the flashes with solids under vacuum. Paracetamol and 4-aminophenol aren't in the standard databases; both are stored inside the file.
 
 ## Summary
 

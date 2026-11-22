@@ -439,6 +439,53 @@
       ]
     },
     {
+      "assembly": "DWSIM.UnitOperations.PulpPaper",
+      "name": "Pulp and paper unit operations",
+      "types": [
+        "DWSIM.UnitOperations.PulpPaper.BleachingStageUnitOperation",
+        "DWSIM.UnitOperations.PulpPaper.CausticizerUnitOperation",
+        "DWSIM.UnitOperations.PulpPaper.DigesterCharge",
+        "DWSIM.UnitOperations.PulpPaper.DigesterKinetics",
+        "DWSIM.UnitOperations.PulpPaper.DigesterOutcome",
+        "DWSIM.UnitOperations.PulpPaper.DigesterPoint",
+        "DWSIM.UnitOperations.PulpPaper.DigesterZone",
+        "DWSIM.UnitOperations.PulpPaper.Editors.FormEditorPulpUnit",
+        "DWSIM.UnitOperations.PulpPaper.EvaporatorTrainUnitOperation",
+        "DWSIM.UnitOperations.PulpPaper.KraftDigesterModel",
+        "DWSIM.UnitOperations.PulpPaper.KraftDigesterUnitOperation",
+        "DWSIM.UnitOperations.PulpPaper.LimeKilnUnitOperation",
+        "DWSIM.UnitOperations.PulpPaper.PulpField",
+        "DWSIM.UnitOperations.PulpPaper.PulpFlows",
+        "DWSIM.UnitOperations.PulpPaper.PulpIcons",
+        "DWSIM.UnitOperations.PulpPaper.PulpPort",
+        "DWSIM.UnitOperations.PulpPaper.PulpResult",
+        "DWSIM.UnitOperations.PulpPaper.PulpStreamTools",
+        "DWSIM.UnitOperations.PulpPaper.PulpUnit",
+        "DWSIM.UnitOperations.PulpPaper.PulpUnitOperation",
+        "DWSIM.UnitOperations.PulpPaper.PulpUnits",
+        "DWSIM.UnitOperations.PulpPaper.PulpWasherUnitOperation",
+        "DWSIM.UnitOperations.PulpPaper.RecoveryBoilerUnitOperation"
+      ]
+    },
+    {
+      "assembly": "DWSIM.UnitOperations.Alumina",
+      "name": "Alumina (Bayer) unit operations",
+      "types": [
+        "DWSIM.UnitOperations.Alumina.AluminaStreamTools",
+        "DWSIM.UnitOperations.Alumina.BauxiteDigesterKinetics",
+        "DWSIM.UnitOperations.Alumina.BauxiteDigesterUnitOperation",
+        "DWSIM.UnitOperations.Alumina.BayerCausticizerUnitOperation",
+        "DWSIM.UnitOperations.Alumina.BayerFlows",
+        "DWSIM.UnitOperations.Alumina.GibbsitePrecipitationKinetics",
+        "DWSIM.UnitOperations.Alumina.HydrateCalcinerUnitOperation",
+        "DWSIM.UnitOperations.Alumina.LiquorEvaporatorUnitOperation",
+        "DWSIM.UnitOperations.Alumina.MudSettlerUnitOperation",
+        "DWSIM.UnitOperations.Alumina.MudWasherTrainUnitOperation",
+        "DWSIM.UnitOperations.Alumina.OxalateRemovalUnitOperation",
+        "DWSIM.UnitOperations.Alumina.PrecipitatorTrainUnitOperation"
+      ]
+    },
+    {
       "assembly": "DWSIM.Extensions.PropertyPackages.Asphaltenes",
       "name": "Asphaltenes property package",
       "types": [
@@ -648,6 +695,52 @@
         "DWSIM.Extensions.PropertyPackages.ThermoPack.ThermoPackFluidIdentifier",
         "DWSIM.Extensions.PropertyPackages.ThermoPack.ThermoPackFunctions",
         "DWSIM.Extensions.PropertyPackages.ThermoPack.ThermoPackPropertyPackageBase"
+      ]
+    },
+    {
+      "assembly": "DWSIM.Extensions.PropertyPackages.KraftLiquors",
+      "name": "Kraft Liquors property package",
+      "types": [
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.BprCorrelation",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftActivityModel",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftCompounds",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftLiquorProperties",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftLiquorsPropertyPackage",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftNrtl",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftRole",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftSettings",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftStreamAnalysis",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftStreamComposer",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftStreamKind",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftStreamPresets",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftStreamProperties",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftStreamReport",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftStreamSpec",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.KraftSystem",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.PulpCompounds",
+        "DWSIM.Extensions.PropertyPackages.KraftLiquors.PulpSpecies"
+      ]
+    },
+    {
+      "assembly": "DWSIM.Extensions.PropertyPackages.BayerLiquors",
+      "name": "Bayer Liquors property package",
+      "types": [
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerActivityModel",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerCompounds",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerLiquorAnalysis",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerLiquorProperties",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerLiquorsPropertyPackage",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerSolid",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerSolids",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerSpecies",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerStreamAnalysis",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerStreamComposer",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerStreamKind",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerStreamPresets",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerStreamProperties",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerStreamReport",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerStreamSpec",
+        "DWSIM.Extensions.PropertyPackages.BayerLiquors.BayerSystem"
       ]
     },
     {

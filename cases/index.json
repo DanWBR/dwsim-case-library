@@ -194,7 +194,33 @@
   },
   {
    "path": "cases/other/bleached-eucalyptus-kraft-mill/bleached-eucalyptus-kraft-mill.dwxmz",
-   "preview": "cases/other/bleached-eucalyptus-kraft-mill/bleached-eucalyptus-kraft-mill.png"
+   "preview": "cases/other/bleached-eucalyptus-kraft-mill/bleached-eucalyptus-kraft-mill.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Pulp and paper unit operations",
+     "assembly": "DWSIM.UnitOperations.PulpPaper"
+    },
+    {
+     "name": "Kraft Liquors property package",
+     "assembly": "DWSIM.Extensions.PropertyPackages.KraftLiquors"
+    }
+   ]
+  },
+  {
+   "path": "cases/other/gibbsitic-bauxite-alumina-refinery/gibbsitic-bauxite-alumina-refinery.dwxmz",
+   "preview": "cases/other/gibbsitic-bauxite-alumina-refinery/gibbsitic-bauxite-alumina-refinery.png",
+   "edition": "patreon",
+   "requires": [
+    {
+     "name": "Alumina (Bayer) unit operations",
+     "assembly": "DWSIM.UnitOperations.Alumina"
+    },
+    {
+     "name": "Bayer Liquors property package",
+     "assembly": "DWSIM.Extensions.PropertyPackages.BayerLiquors"
+    }
+   ]
   },
   {
    "path": "cases/other/raw-sugar-mill/raw-sugar-mill.dwxmz",

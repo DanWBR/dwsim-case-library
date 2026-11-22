@@ -13,7 +13,7 @@
 
 Ten years of an oil field with three producers, one gas injector and one water injector, solved together with its surface facilities. OPM Flow computes the reservoir. DWSIM computes the gathering network and a production plant with two-stage separation, gas recompression, injection compression, fuel gas and water injection. At every report step the network returns the wellhead pressure of each well to the reservoir, and the plant returns the gas and the water it has available for injection.
 
-The reservoir run on its own, with the fixed 300 psia wellhead pressure of the reservoir model, holds 24000 STB/d for 5.5 years and recovers 77.1 million STB. With the surface model in the loop the wells see 490 to 620 psia at the wellhead and a plant limit of 20000 STB/d of liquid, and the same field recovers 70.3 million STB. The difference of 6.8 million STB (9 %) is what the fixed wellhead pressure hides.
+The reservoir run on its own, with the fixed 300 psia wellhead pressure of the reservoir model, holds 24000 STB/d for 5.5 years and recovers 77.1 million STB. With the surface model in the loop, the network returns wellhead pressure limits of 490 to 620 psia and the plant takes at most 20000 STB/d of liquid, and the same field recovers 70.3 million STB. The wells could flow against a much higher wellhead pressure (about 1800 to 1900 psia on the plateau), so the pressure limits never hold a well back. The difference of 6.8 million STB (9 %) comes from the plant: its liquid limit cuts the plateau from 24000 to 20000 STB/d, and the gas and water it reinjects keep the reservoir pressure higher, so P1 still produces at the end and the rate after ten years is higher than in the reservoir run alone.
 
 ![Flowsheet](oil-field-reservoir-to-plant.png)
 
@@ -84,7 +84,7 @@ The returns act one step later, since the reservoir step that produced the rates
 
 | Quantity | Reservoir alone | Coupled to the plant |
 |---|---|---|
-| Wellhead pressure of the producers | 300 psia (fixed) | 490 to 565 psia at the start, 415 to 620 psia after water arrives |
+| Wellhead pressure limit (THP) of the producers | 300 psia (fixed) | 490 to 565 psia at the start, 415 to 620 psia after water arrives |
 | Oil plateau | 24000 STB/d for 2000 days | 20000 STB/d for 2000 days |
 | Oil rate after 10 years | 16000 STB/d | 17370 STB/d |
 | Cumulative oil | 77.13 million STB | 70.29 million STB |
